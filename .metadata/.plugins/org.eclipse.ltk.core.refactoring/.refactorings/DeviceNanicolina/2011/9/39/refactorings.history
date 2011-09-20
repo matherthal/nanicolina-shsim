@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DeviceServer.java&apos; to &apos;TestServer/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;DeviceNanicolina&apos;&#x0D;&#x0A;- Destination element: &apos;TestServer/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;br.uff.tempo.nanicolina.device.DeviceServer.java&apos;" description="Copy compilation unit" destination="=TestServer/src&lt;" element1="/src&lt;br.uff.tempo.nanicolina.device{DeviceServer.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1316494619591" units="1" version="1.0"/>
+</session>
