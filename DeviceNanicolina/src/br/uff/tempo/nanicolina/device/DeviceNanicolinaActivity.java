@@ -9,5 +9,7 @@ public class DeviceNanicolinaActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        DeviceServer ds = new DeviceServer(10006);
+        System.out.println(ds.receiveStatus());
     }
 }
