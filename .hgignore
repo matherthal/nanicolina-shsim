@@ -1,0 +1,2 @@
+syntax: glob
+.metadata/.plugins/org.eclipse.debug.core/.launches/hg_push.launch
