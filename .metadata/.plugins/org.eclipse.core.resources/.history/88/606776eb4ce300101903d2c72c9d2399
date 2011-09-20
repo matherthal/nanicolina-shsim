@@ -1,6 +1,0 @@
-package br.uff.tempo.nanicolina.csr;
-
-
-public class CSRJSON {
-	JSONObject jo = new JSONObject();
-}

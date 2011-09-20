@@ -1,4 +1,0 @@
-INDEX VERSION 1.126+C:\Users\Mareli\IC\workspace\nanicolina-shsim\.metadata\.plugins\org.eclipse.jdt.core
-3308132827.index
-1775439870.index
-176792423.index

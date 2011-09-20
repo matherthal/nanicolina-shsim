@@ -1,7 +1,0 @@
-package br.tempo.nanicolina.json;
-
-import org.j
-
-public class CSRJSON {
-	JSONObject jo = new JSONObject();
-}
