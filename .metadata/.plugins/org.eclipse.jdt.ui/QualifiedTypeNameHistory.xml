@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="br.uff.tempo.nanicolina.devices.Device"/>
+<fullyQualifiedTypeName name="br.uff.tempo.nanicolina.devices.Local"/>
+<fullyQualifiedTypeName name="br.uff.tempo.nanicolina.devices.Lamp"/>
+<fullyQualifiedTypeName name="br.uff.tempo.nanicolina.devices.VisualDevice"/>
+<fullyQualifiedTypeName name="com.google.gson.Gson"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+</qualifiedTypeNameHistroy>

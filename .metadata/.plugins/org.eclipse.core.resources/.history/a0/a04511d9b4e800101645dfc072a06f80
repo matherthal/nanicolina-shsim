@@ -1,0 +1,16 @@
+package br.uff.tempo.nanicolina.csr;
+
+import br.uff.tempo.nanicolina.devices.Device;
+import br.uff.tempo.nanicolina.devices.Local;
+
+public class ApplicationManager {
+
+	Device[] nonRegDevice;//dispositivos não registrados
+	Device[] regDevice;//dispositivos registrados na casa
+	public void initDevices() {
+		//simula consulta a banco de dados;
+		nonRegDevice[0] = new Device("f01", 0, new Local(20, 30));
+		
+	}
+
+}
