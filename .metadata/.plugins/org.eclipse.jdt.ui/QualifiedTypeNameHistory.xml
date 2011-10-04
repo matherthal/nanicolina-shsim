@@ -7,5 +7,6 @@
 <fullyQualifiedTypeName name="br.uff.tempo.nanicolina.devices.Lamp"/>
 <fullyQualifiedTypeName name="br.uff.tempo.nanicolina.devices.VisualDevice"/>
 <fullyQualifiedTypeName name="com.google.gson.Gson"/>
+<fullyQualifiedTypeName name="android.R"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

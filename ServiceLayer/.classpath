@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="C:/Users/Mareli/IC/workspace/gson-1.7.1-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Mareli/IC/workspace/gson-1.7.1-sources.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="C:/rxtx-2.1-7-bins-r2/RXTXcomm.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
