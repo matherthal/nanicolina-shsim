@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="34" version="2.0">
+<workbench progressCount="79" version="2.0">
 <workbenchAdvisor/>
-<window height="738" maximized="true" width="1024" x="129" y="-18">
+<window height="738" maximized="true" width="1024" x="207" y="-11">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="153" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="adt.actionSet.avdManager" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="adt.actionSet.wizards" itemType="typeToolBarContribution" x="84" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.jst.j2ee.J2eeMainActionSet" itemType="typeToolBarContribution" x="91" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="130" y="22"/>
-<coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="38" y="22"/>
-<coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.pde.ui.buildEditor" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.android.ide.eclipse.editors.layout.LayoutEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1317495269265" focus="true" label="Workspace - Debug">
+<page aggregateWorkingSetId="Aggregate for window 1319502833504" focus="true" label="RemoteServices - Debug">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -48,62 +47,258 @@
 <part id="9"/>
 <part id="10"/>
 <part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
+<part id="27"/>
+<part id="28"/>
+<part id="29"/>
+<part id="30"/>
+<part id="31"/>
+<part id="32"/>
+<part id="33"/>
+<part id="34"/>
+<part id="35"/>
+<part id="36"/>
+<part id="37"/>
+<part id="38"/>
+<part id="39"/>
+<part id="40"/>
+<part id="41"/>
+<part id="42"/>
+<part id="43"/>
+<part id="44"/>
+<part id="45"/>
+<part id="46"/>
+<part id="47"/>
+<part id="48"/>
+<part id="49"/>
+<part id="50"/>
+<part id="51"/>
+<part id="52"/>
+<part id="53"/>
+<part id="54"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServiceManager.java" partName="ServiceManager.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceManager.java" title="ServiceManager.java" tooltip="ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceManager.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceManager.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4206" selectionTopPixel="1780"/>
+<editor id="com.android.ide.eclipse.editors.resources.ResourcesEditor" name="strings.xml" partName="strings.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/RemoteServices/res/values/strings.xml" title="strings.xml" tooltip="RemoteServices/res/values/strings.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RemoteServices/res/values/strings.xml"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServiceClient.java" partName="ServiceClient.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceClient.java" title="ServiceClient.java" tooltip="ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceClient.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceClient.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="40" selectionTopPixel="0"/>
+<editor id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="messenger_service_binding.xml" partName="messenger_service_binding.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/RemoteServices/res/layout/messenger_service_binding.xml" title="messenger_service_binding.xml" tooltip="RemoteServices/res/layout/messenger_service_binding.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RemoteServices/res/layout/messenger_service_binding.xml"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataObject.java" partName="DataObject.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ServiceLayer/src/br/uff/tempo/nanicolina/services/DataObject.java" title="DataObject.java" tooltip="ServiceLayer/src/br/uff/tempo/nanicolina/services/DataObject.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ServiceLayer/src/br/uff/tempo/nanicolina/services/DataObject.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="41" selectionOffset="0" selectionTopPixel="0"/>
+<editor id="com.android.ide.eclipse.editors.resources.ResourcesEditor" name="ids.xml" partName="ids.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/RemoteServices/res/values/ids.xml" title="ids.xml" tooltip="RemoteServices/res/values/ids.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RemoteServices/res/values/ids.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MessengerService.java" partName="MessengerService.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/RemoteServices/src/com/example/android/apis/app/MessengerService.java" title="MessengerService.java" tooltip="RemoteServices/src/com/example/android/apis/app/MessengerService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RemoteServices/src/com/example/android/apis/app/MessengerService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5891" selectionTopPixel="1626"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MessengerServiceActivities.java" partName="MessengerServiceActivities.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/RemoteServices/src/com/example/android/apis/app/MessengerServiceActivities.java" title="MessengerServiceActivities.java" tooltip="RemoteServices/src/com/example/android/apis/app/MessengerServiceActivities.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RemoteServices/src/com/example/android/apis/app/MessengerServiceActivities.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="67" selectionOffset="6694" selectionTopPixel="180"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.resources.ResourcesEditor" name="attrs.xml" partName="attrs.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/RemoteServices/res/values/attrs.xml" title="attrs.xml" tooltip="RemoteServices/res/values/attrs.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RemoteServices/res/values/attrs.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.resources.ResourcesEditor" name="arrays.xml" partName="arrays.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/RemoteServices/res/values/arrays.xml" title="arrays.xml" tooltip="RemoteServices/res/values/arrays.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RemoteServices/res/values/arrays.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.resources.ResourcesEditor" name="styles.xml" partName="styles.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/RemoteServices/res/values/styles.xml" title="styles.xml" tooltip="RemoteServices/res/values/styles.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RemoteServices/res/values/styles.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="R.java" partName="R.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/RemoteServices/gen/com/example/android/apis/R.java" title="R.java" tooltip="RemoteServices/gen/com/example/android/apis/R.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RemoteServices/gen/com/example/android/apis/R.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="4320"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MessengerService.java" partName="MessengerService.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceAgent/src/br/uff/tempo/nanicolina/resourceagent/MessengerService.java" title="MessengerService.java" tooltip="ResourceAgent/src/br/uff/tempo/nanicolina/resourceagent/MessengerService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceAgent/src/br/uff/tempo/nanicolina/resourceagent/MessengerService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4780" selectionTopPixel="1131"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RemoteService.java" partName="RemoteService.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/RemoteServices/src/com/example/android/apis/app/RemoteService.java" title="RemoteService.java" tooltip="RemoteServices/src/com/example/android/apis/app/RemoteService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RemoteServices/src/com/example/android/apis/app/RemoteService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="900"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="RemoteServices Manifest" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/RemoteServices/AndroidManifest.xml" title="RemoteServices Manifest" tooltip="RemoteServices/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RemoteServices/AndroidManifest.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="ResourceAgent Manifest" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceAgent/AndroidManifest.xml" title="ResourceAgent Manifest" tooltip="ResourceAgent/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceAgent/AndroidManifest.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ResourceAgentActivity.java" partName="ResourceAgentActivity.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceAgent/src/br/uff/tempo/nanicolina/resourceagent/ResourceAgentActivity.java" title="ResourceAgentActivity.java" tooltip="ResourceAgent/src/br/uff/tempo/nanicolina/resourceagent/ResourceAgentActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceAgent/src/br/uff/tempo/nanicolina/resourceagent/ResourceAgentActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7090" selectionTopPixel="2016"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LocalService.java" partName="LocalService.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceAgent/src/br/uff/tempo/nanicolina/resourceagent/LocalService.java" title="LocalService.java" tooltip="ResourceAgent/src/br/uff/tempo/nanicolina/resourceagent/LocalService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceAgent/src/br/uff/tempo/nanicolina/resourceagent/LocalService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1049" selectionTopPixel="51"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LocalServiceActivities.java" partName="LocalServiceActivities.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceAgent/src/br/uff/tempo/nanicolina/resourceagent/LocalServiceActivities.java" title="LocalServiceActivities.java" tooltip="ResourceAgent/src/br/uff/tempo/nanicolina/resourceagent/LocalServiceActivities.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceAgent/src/br/uff/tempo/nanicolina/resourceagent/LocalServiceActivities.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2969" selectionTopPixel="1191"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.resources.ResourcesEditor" name="strings.xml" partName="strings.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceAgent/res/values/strings.xml" title="strings.xml" tooltip="ResourceAgent/res/values/strings.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceAgent/res/values/strings.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="local_service_binding.xml" partName="local_service_binding.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceAgent/res/layout/local_service_binding.xml" title="local_service_binding.xml" tooltip="ResourceAgent/res/layout/local_service_binding.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceAgent/res/layout/local_service_binding.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="local_service_controller.xml" partName="local_service_controller.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceAgent/res/layout/local_service_controller.xml" title="local_service_controller.xml" tooltip="ResourceAgent/res/layout/local_service_controller.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceAgent/res/layout/local_service_controller.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="View.class" partName="View.class" title="View.class" tooltip="android.view.View" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=RemoteServices/C:\/Android\/android-sdk\/platforms\/android-8\/android.jar&lt;android.view(View.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LocalServiceActivities.java" partName="LocalServiceActivities.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceAgentLocalTest/src/br/uff/tempo/nanicolina/resourceagent/LocalServiceActivities.java" title="LocalServiceActivities.java" tooltip="ResourceAgentLocalTest/src/br/uff/tempo/nanicolina/resourceagent/LocalServiceActivities.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceAgentLocalTest/src/br/uff/tempo/nanicolina/resourceagent/LocalServiceActivities.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2769" selectionTopPixel="546"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LocalService.java" partName="LocalService.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceAgentLocalTest/src/br/uff/tempo/nanicolina/resourceagent/LocalService.java" title="LocalService.java" tooltip="ResourceAgentLocalTest/src/br/uff/tempo/nanicolina/resourceagent/LocalService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceAgentLocalTest/src/br/uff/tempo/nanicolina/resourceagent/LocalService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2192" selectionTopPixel="516"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LocalServiceActivity.java" partName="LocalServiceActivity.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/LocalServices/src/br/uff/tempo/nanicolina/localservices/LocalServiceActivity.java" title="LocalServiceActivity.java" tooltip="LocalServices/src/br/uff/tempo/nanicolina/localservices/LocalServiceActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LocalServices/src/br/uff/tempo/nanicolina/localservices/LocalServiceActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1108" selectionTopPixel="253"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LocalService.java" partName="LocalService.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/LocalServices/src/br/uff/tempo/nanicolina/localservices/LocalService.java" title="LocalService.java" tooltip="LocalServices/src/br/uff/tempo/nanicolina/localservices/LocalService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LocalServices/src/br/uff/tempo/nanicolina/localservices/LocalService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="78" selectionOffset="2347" selectionTopPixel="336"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="LocalServices Manifest" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/LocalServices/AndroidManifest.xml" title="LocalServices Manifest" tooltip="LocalServices/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LocalServices/AndroidManifest.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="ResourceLayer Manifest" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceLayer/AndroidManifest.xml" title="ResourceLayer Manifest" tooltip="ResourceLayer/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceLayer/AndroidManifest.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.resources.ResourcesEditor" name="ids.xml" partName="ids.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/LocalServices/res/values/ids.xml" title="ids.xml" tooltip="LocalServices/res/values/ids.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LocalServices/res/values/ids.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.resources.ResourcesEditor" name="strings.xml" partName="strings.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/LocalServices/res/values/strings.xml" title="strings.xml" tooltip="LocalServices/res/values/strings.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LocalServices/res/values/strings.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" partName="main.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/LocalServices/res/layout/main.xml" title="main.xml" tooltip="LocalServices/res/layout/main.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LocalServices/res/layout/main.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="local_service_controller.xml" partName="local_service_controller.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/LocalServices/res/layout/local_service_controller.xml" title="local_service_controller.xml" tooltip="LocalServices/res/layout/local_service_controller.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LocalServices/res/layout/local_service_controller.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.drawable.DrawableEditor" name="line.xml" partName="line.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/LocalServices/res/drawable/line.xml" title="line.xml" tooltip="LocalServices/res/drawable/line.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LocalServices/res/drawable/line.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.PropertiesFileEditor" name="default.properties" partName="default.properties" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/RemoteServices/default.properties" title="default.properties" tooltip="RemoteServices/default.properties" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RemoteServices/default.properties"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.pde.ui.buildEditor" name="build.properties" partName="build.properties" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/RemoteServices/tests/build.properties" title="build.properties" tooltip="RemoteServices/tests/build.properties" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RemoteServices/tests/build.properties"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.resources.ResourcesEditor" name="id.xml" partName="id.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/LocalServices/res/values/id.xml" title="id.xml" tooltip="LocalServices/res/values/id.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LocalServices/res/values/id.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ExampleBroadcastReceiver.java" partName="ExampleBroadcastReceiver.java" path="C:/Android/android-sdk/samples/android-11/ApiDemos/src/com/example/android/apis/appwidget/ExampleBroadcastReceiver.java" title="ExampleBroadcastReceiver.java" tooltip="ApiDemos/src/com/example/android/apis/appwidget/ExampleBroadcastReceiver.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApiDemos/src/com/example/android/apis/appwidget/ExampleBroadcastReceiver.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="126"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ExampleAppWidgetProvider.java" partName="ExampleAppWidgetProvider.java" path="C:/Android/android-sdk/samples/android-11/ApiDemos/src/com/example/android/apis/appwidget/ExampleAppWidgetProvider.java" title="ExampleAppWidgetProvider.java" tooltip="ApiDemos/src/com/example/android/apis/appwidget/ExampleAppWidgetProvider.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApiDemos/src/com/example/android/apis/appwidget/ExampleAppWidgetProvider.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ExampleAppWidgetConfigure.java" partName="ExampleAppWidgetConfigure.java" path="C:/Android/android-sdk/samples/android-11/ApiDemos/src/com/example/android/apis/appwidget/ExampleAppWidgetConfigure.java" title="ExampleAppWidgetConfigure.java" tooltip="ApiDemos/src/com/example/android/apis/appwidget/ExampleAppWidgetConfigure.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApiDemos/src/com/example/android/apis/appwidget/ExampleAppWidgetConfigure.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3" selectionTopPixel="1191"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LocalServiceActivities.java" partName="LocalServiceActivities.java" path="C:/Android/android-sdk/samples/android-11/ApiDemos/src/com/example/android/apis/app/LocalServiceActivities.java" title="LocalServiceActivities.java" tooltip="ApiDemos/src/com/example/android/apis/app/LocalServiceActivities.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ApiDemos/src/com/example/android/apis/app/LocalServiceActivities.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="167" selectionOffset="6197" selectionTopPixel="1971"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ResourceManagerActivity.java" partName="ResourceManagerActivity.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/src/br/uff/tempo/naniclina/resourcemanager/ResourceManagerActivity.java" title="ResourceManagerActivity.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resourcemanager/ResourceManagerActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/src/br/uff/tempo/naniclina/resourcemanager/ResourceManagerActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1598" selectionTopPixel="735"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="main.xml" partName="main.xml" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/res/layout/main.xml" title="main.xml" tooltip="ResourceManager/res/layout/main.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/res/layout/main.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Device.java" partName="Device.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/src/br/uff/tempo/naniclina/resources/Device.java" title="Device.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/Device.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/Device.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="26" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Local.java" partName="Local.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/src/br/uff/tempo/naniclina/resources/Local.java" title="Local.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/Local.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/Local.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="26" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServiceMain.java" partName="ServiceMain.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceMain.java" title="ServiceMain.java" tooltip="ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceMain.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceMain.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="331" selectionTopPixel="315"/>
+<editorState selectionHorizontalPixel="0" selectionLength="26" selectionOffset="906" selectionTopPixel="225"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" partName="Test.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ServiceLayer/src/br/uff/tempo/nanicolina/jason/Test.java" title="Test.java" tooltip="ServiceLayer/src/br/uff/tempo/nanicolina/jason/Test.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ServiceLayer/src/br/uff/tempo/nanicolina/jason/Test.java"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DangerDevice.java" partName="DangerDevice.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/src/br/uff/tempo/naniclina/resources/DangerDevice.java" title="DangerDevice.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/DangerDevice.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/DangerDevice.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="26" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VisualDevice.java" partName="VisualDevice.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/src/br/uff/tempo/naniclina/resources/VisualDevice.java" title="VisualDevice.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/VisualDevice.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/VisualDevice.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="26" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PresenceSensor.java" partName="PresenceSensor.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/src/br/uff/tempo/naniclina/resources/PresenceSensor.java" title="PresenceSensor.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/PresenceSensor.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/PresenceSensor.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="26" selectionTopPixel="45"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServiceManager.java" partName="ServiceManager.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceManager.java" title="ServiceManager.java" tooltip="ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceManager.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="270"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ResourceServer.java" partName="ResourceServer.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceLayer/src/br/uff/tempo/nanicolina/resource/ResourceServer.java" title="ResourceServer.java" tooltip="ResourceLayer/src/br/uff/tempo/nanicolina/resource/ResourceServer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceLayer/src/br/uff/tempo/nanicolina/resource/ResourceServer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="54" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServiceManager.java" partName="ServiceManager.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/src/br/uff/tempo/naniclina/resourcemanager/ServiceManager.java" title="ServiceManager.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resourcemanager/ServiceManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/src/br/uff/tempo/naniclina/resourcemanager/ServiceManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="443" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ResourceLayerActivity.java" partName="ResourceLayerActivity.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceLayer/src/br/uff/tempo/nanicolina/resource/ResourceLayerActivity.java" title="ResourceLayerActivity.java" tooltip="ResourceLayer/src/br/uff/tempo/nanicolina/resource/ResourceLayerActivity.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceLayer/src/br/uff/tempo/nanicolina/resource/ResourceLayerActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="468" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CellPhone.java" partName="CellPhone.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/src/br/uff/tempo/naniclina/resources/CellPhone.java" title="CellPhone.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/CellPhone.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/CellPhone.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="26" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="R.java" partName="R.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceLayer/gen/br/uff/tempo/nanicolina/resource/R.java" title="R.java" tooltip="ResourceLayer/gen/br/uff/tempo/nanicolina/resource/R.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceLayer/gen/br/uff/tempo/nanicolina/resource/R.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FixedDevice.java" partName="FixedDevice.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/src/br/uff/tempo/naniclina/resources/FixedDevice.java" title="FixedDevice.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/FixedDevice.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/FixedDevice.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="26" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServiceEventClient.java" partName="ServiceEventClient.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/TestServer/src/ServiceEventClient.java" title="ServiceEventClient.java" tooltip="TestServer/src/ServiceEventClient.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TestServer/src/ServiceEventClient.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1449" selectionTopPixel="495"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Lamp.java" partName="Lamp.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/src/br/uff/tempo/naniclina/resources/Lamp.java" title="Lamp.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/Lamp.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/Lamp.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="26" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JavaServer.java" partName="JavaServer.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/TestServer/src/JavaServer.java" title="JavaServer.java" tooltip="TestServer/src/JavaServer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TestServer/src/JavaServer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="248" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MeasuringDevice.java" partName="MeasuringDevice.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/src/br/uff/tempo/naniclina/resources/MeasuringDevice.java" title="MeasuringDevice.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/MeasuringDevice.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/MeasuringDevice.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="26" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="CommPortIdentifier.class" partName="CommPortIdentifier.class" title="CommPortIdentifier.class" tooltip="gnu.io.CommPortIdentifier" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=ServiceLayer/C:\/rxtx-2.1-7-bins-r2\/RXTXcomm.jar&lt;gnu.io(CommPortIdentifier.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Shower.java" partName="Shower.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/src/br/uff/tempo/naniclina/resources/Shower.java" title="Shower.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/Shower.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/Shower.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="26" selectionTopPixel="45"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UnmovedDevice.java" partName="UnmovedDevice.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/ResourceManager/src/br/uff/tempo/naniclina/resources/UnmovedDevice.java" title="UnmovedDevice.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/UnmovedDevice.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/UnmovedDevice.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="26" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Gson.java" partName="Gson.java" path="C:/Users/Mareli/IC/workspace/nanicolina-shsim/GsonProject/src/main/java/com/google/gson/Gson.java" title="Gson.java" tooltip="GsonProject/src/main/java/com/google/gson/Gson.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GsonProject/src/main/java/com/google/gson/Gson.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2227" selectionTopPixel="2430"/>
 </editor>
 </editors>
 <views>
-<view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Type Hierarchy">
-<viewState hidefields="false" hidelocaltypes="false" hidenonpublic="false" hidestatic="false" input="=ResourceLayer/gen" link_editors="0" mv_vertical_scroll="0" orientation="3" qualified_names="0" ratio="350" showinherited="false" sortbydefiningtype="false" vertical_scroll="0" view="2" workingSetName=""/>
-</view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
 </view>
+<view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables"/>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
 <view id="org.eclipse.debug.ui.VariableView" partName="Variables">
 <viewState/>
@@ -115,67 +310,19 @@
 <viewState/>
 </view>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
-<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+<viewState CommonNavigator.LINKING_ENABLED="1" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 <view id="com.android.ide.eclipse.ddms.views.LogCatView" partName="LogCat">
 <viewState/>
 </view>
-<view id="org.eclipse.ui.views.AllMarkersView" partName="Markers">
-<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.allSeverityField" categoryGroup="org.eclipse.ui.ide.type" markerContentGenerator="org.eclipse.ui.ide.allMarkersGenerator" partName="Markers">
-<columnWidths org.eclipse.ui.ide.allSeverityField="300" org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.allSeverityField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
-</viewState>
-</view>
-<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" partName="Snippets"/>
-<view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (77 items)"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
-</viewState>
-</view>
-<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" partName="Data Source Explorer"/>
-<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
-<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
-<customFilters userDefinedPatternsEnabled="false">
-<xmlDefinedFilters>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsConnections" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsTempFiles" isEnabled="true"/>
-<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
-<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
-</xmlDefinedFilters>
-</customFilters>
 </viewState>
 </view>
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
@@ -203,245 +350,6 @@
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
 </views>
 <perspectives activePart="org.eclipse.debug.ui.DebugView" activePerspective="org.eclipse.debug.ui.DebugPerspective">
-<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
-<descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
-<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
-<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
-<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
-<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
-<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
-<alwaysOnActionSet id="adt.actionSet.wizards"/>
-<alwaysOnActionSet id="adt.actionSet.refactorings"/>
-<alwaysOnActionSet id="adt.actionSet.avdManager"/>
-<alwaysOnActionSet id="org.eclipse.jst.j2ee.J2eeMainActionSet"/>
-<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
-<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
-<alwaysOnActionSet id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
-<alwaysOnActionSet id="org.eclipse.wst.ws.explorer.explorer"/>
-<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
-<show_view_action id="org.eclipse.wst.server.ui.ServersView"/>
-<show_view_action id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator"/>
-<show_view_action id="org.eclipse.ui.views.BookmarkView"/>
-<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
-<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
-<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
-<show_view_action id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
-<show_view_action id="org.eclipse.ui.views.AllMarkersView"/>
-<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
-<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
-<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
-<new_wizard_action id="org.eclipse.jpt.jpa.ui.wizard.newJpaProject"/>
-<new_wizard_action id="org.eclipse.jst.j2ee.ui.project.facet.EarProjectWizard"/>
-<new_wizard_action id="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard"/>
-<new_wizard_action id="org.eclipse.jst.ejb.ui.project.facet.EjbProjectWizard"/>
-<new_wizard_action id="org.eclipse.jst.j2ee.jca.ui.internal.wizard.ConnectorProjectWizard"/>
-<new_wizard_action id="org.eclipse.jst.j2ee.ui.project.facet.appclient.AppClientProjectWizard"/>
-<new_wizard_action id="org.eclipse.wst.web.ui.internal.wizards.SimpleWebProjectWizard"/>
-<new_wizard_action id="org.eclipse.jpt.ui.wizard.newJpaProject"/>
-<new_wizard_action id="org.eclipse.jst.servlet.ui.internal.wizard.AddServletWizard"/>
-<new_wizard_action id="org.eclipse.jst.ejb.ui.internal.wizard.AddSessionBeanWizard"/>
-<new_wizard_action id="org.eclipse.jst.ejb.ui.internal.wizard.AddMessageDrivenBeanWizard"/>
-<new_wizard_action id="org.eclipse.jpt.ui.wizard.newEntity"/>
-<new_wizard_action id="org.eclipse.jst.ws.creation.ui.wizard.serverwizard"/>
-<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
-<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
-<perspective_action id="org.eclipse.jpt.ui.jpaPerspective"/>
-<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
-<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
-<perspective_action id="org.eclipse.ui.resourcePerspective"/>
-<perspective_action id="org.eclipse.wst.web.ui.webDevPerspective"/>
-<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
-<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
-<view id="org.eclipse.ui.views.AllMarkersView"/>
-<view id="org.eclipse.ui.views.PropertySheet"/>
-<view id="org.eclipse.wst.server.ui.ServersView"/>
-<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator"/>
-<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
-<fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
-<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.ui.PackagesView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
-</presentation>
-</folder>
-</info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@6162c87a" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="topLeft">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
-<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
-</folder>
-</info>
-<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottomRight" ratio="0.6858108" ratioLeft="406" ratioRight="186" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.AllMarkersView" label="Markers"/>
-<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
-<page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
-<page content="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" label="Data Source Explorer"/>
-<page content="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" label="Snippets"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
-<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-</presentation>
-</folder>
-</info>
-<info folder="true" part="topRight" ratio="0.7" ratioLeft="525" ratioRight="225" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
-<part id="1"/>
-</presentation>
-</folder>
-</info>
-</mainWindow>
-</layout>
-</perspective>
-<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
-<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
-<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
-<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
-<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
-<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
-<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
-<alwaysOnActionSet id="adt.actionSet.wizards"/>
-<alwaysOnActionSet id="adt.actionSet.refactorings"/>
-<alwaysOnActionSet id="adt.actionSet.avdManager"/>
-<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
-<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
-<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
-<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
-<alwaysOnActionSet id="org.eclipse.cdt.debug.ui.debugActionSet"/>
-<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
-<show_view_action id="org.eclipse.debug.ui.DebugView"/>
-<show_view_action id="org.eclipse.debug.ui.VariableView"/>
-<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
-<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
-<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
-<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
-<show_view_action id="org.eclipse.ui.views.TaskList"/>
-<show_view_action id="com.android.ide.eclipse.ddms.views.LogCatView"/>
-<show_view_action id="com.android.ide.eclipse.ddms.views.DeviceView"/>
-<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
-<show_view_action id="org.eclipse.datatools.sqltools.result.resultView"/>
-<show_view_action id="org.eclipse.pde.runtime.LogView"/>
-<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
-<perspective_action id="com.android.ide.eclipse.ddms.Perspective"/>
-<perspective_action id="org.eclipse.datatools.sqltools.sqleditor.perspectives.EditorPerspective"/>
-<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
-<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
-<perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
-<perspective_action id="org.eclipse.wst.xml.ui.perspective"/>
-<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
-<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.ui.views.TaskList"/>
-<view id="org.eclipse.debug.ui.DebugView"/>
-<view id="org.eclipse.wst.server.ui.ServersView"/>
-<view id="org.eclipse.debug.ui.VariableView"/>
-<view id="org.eclipse.debug.ui.BreakpointView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
-<fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
-<page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
-<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
-</folder>
-</info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1014" ratioRight="338" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
-<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
-</folder>
-</info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7488152" ratioLeft="474" ratioRight="159" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
-<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
-<page content="org.eclipse.datatools.sqltools.result.resultView" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
-<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
-<page content="org.eclipse.wst.xsl.jaxp.debug.ui.view1" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
-</folder>
-</info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@7ce973a2" ratio="0.5" ratioLeft="676" ratioRight="676" relationship="2" relative="org.eclipse.debug.internal.ui.ConsoleFolderView">
-<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
-<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
-</folder>
-</info>
-<info part="org.eclipse.ui.editorss" ratio="0.44936708" ratioLeft="213" ratioRight="261" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1014" ratioRight="338" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
-</folder>
-</info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="676" ratioRight="676" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
-<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
-<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
-<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
-</folder>
-</info>
-</mainWindow>
-</layout>
-</perspective>
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="adt.actionSet.wizards"/>
@@ -482,6 +390,7 @@
 <show_view_action id="org.eclipse.pde.runtime.LogView"/>
 <show_view_action id="org.eclipse.ant.ui.views.AntView"/>
 <show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<show_in_time id="org.eclipse.ui.navigator.ProjectExplorer" time="1319535978303"/>
 <new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
 <new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
 <new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
@@ -510,35 +419,38 @@
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.jdt.ui.PackageExplorer"/>
-<view id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
-<info folder="true" part="left">
-<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
-<page content="org.eclipse.jdt.ui.TypeHierarchy" label="Type Hierarchy"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@2afd2c69">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="left" ratio="0.25" ratioLeft="338" ratioRight="1014" relationship="2" relative="org.eclipse.ui.internal.ViewStack@2afd2c69">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1014" ratioRight="338" relationship="2" relative="left">
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="left">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="338" ratioRight="1014" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7488152" ratioLeft="474" ratioRight="159" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.29873982" ratioLeft="403" ratioRight="946" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.75396824" ratioLeft="475" ratioRight="155" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -555,7 +467,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@437e41d0" ratio="0.7495069" ratioLeft="760" ratioRight="254" relationship="2" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@612c6118" ratio="0.7493333" ratioLeft="562" ratioRight="188" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.mylyn.tasks.ui.views.tasks" appearance="2" expanded="2">
 <page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -563,7 +475,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.5" ratioLeft="237" ratioRight="237" relationship="4" relative="org.eclipse.ui.internal.ViewStack@437e41d0">
+<info folder="true" part="right" ratio="0.5" ratioLeft="231" ratioRight="231" relationship="4" relative="org.eclipse.ui.internal.ViewStack@612c6118">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
@@ -576,137 +488,320 @@
 </mainWindow>
 </layout>
 </perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="adt.actionSet.wizards"/>
+<alwaysOnActionSet id="adt.actionSet.refactorings"/>
+<alwaysOnActionSet id="adt.actionSet.avdManager"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="com.android.ide.eclipse.ddms.views.LogCatView"/>
+<show_view_action id="com.android.ide.eclipse.ddms.views.DeviceView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.cdt.debug.ui.SignalsView"/>
+<show_view_action id="org.eclipse.debug.ui.RegisterView"/>
+<show_view_action id="org.eclipse.debug.ui.ModuleView"/>
+<show_view_action id="org.eclipse.debug.ui.MemoryView"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.cdt.debug.ui.executablesView"/>
+<show_view_action id="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view"/>
+<show_view_action id="org.eclipse.cdt.dsf.debug.ui.disassembly.view"/>
+<show_view_action id="org.eclipse.datatools.sqltools.result.resultView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<perspective_action id="com.android.ide.eclipse.ddms.Perspective"/>
+<perspective_action id="org.eclipse.cdt.ui.CPerspective"/>
+<perspective_action id="org.eclipse.datatools.sqltools.sqleditor.perspectives.EditorPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.wst.jsdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.wst.xml.ui.perspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.cdt.debug.ui.executablesView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.wst.server.ui.ServersView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1014" ratioRight="338" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7488152" ratioLeft="474" ratioRight="159" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.datatools.sqltools.result.resultView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
+<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
+<page content="org.eclipse.wst.xsl.jaxp.debug.ui.view1" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d409cad" ratio="0.5" ratioLeft="676" ratioRight="676" relationship="2" relative="org.eclipse.debug.internal.ui.ConsoleFolderView">
+<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
+<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.44936708" ratioLeft="213" ratioRight="261" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1014" ratioRight="338" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="676" ratioRight="676" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.ModuleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
 </perspectives>
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TestServer/src/ServiceEventClient.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resourcemanager/ResourceManagerActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/DangerDevice.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/PresenceSensor.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resourcemanager/ServiceManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/CellPhone.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/Device.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/FixedDevice.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/Lamp.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/Local.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/MeasuringDevice.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/Shower.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/UnmovedDevice.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resources/VisualDevice.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/GsonProject/src/main/java/com/google/gson/Gson.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/ResourceManager/res/layout/main.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ResourceManager/src/br/uff/tempo/naniclina/resourcemanager/ResourceManagerActivity.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=LocalServices/C:\/Android\/android-sdk\/platforms\/android-8\/android.jar&lt;java.lang.reflect(InvocationTargetException.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=LocalServices/C:\/Android\/android-sdk\/platforms\/android-8\/android.jar&lt;java.lang(ThreadGroup.class"/>
 </editors>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="4088" y="55"/>
-</item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="578" y="91"/>
-</item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3376" y="0"/>
-</item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3210" y="7"/>
-</item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3290" y="0"/>
-</item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3292" y="0"/>
-</item>
-<item historyLabel="ServiceEventClient.java" index="0">
+<item historyLabel="ServiceManager.java" index="3">
 <position/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3775" y="0"/>
+<item historyLabel="ResourceManagerActivity.java" index="0">
+<position info="not_deleted" x="3773" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3231" y="0"/>
+<item historyLabel="ResourceManagerActivity.java" index="0">
+<position info="not_deleted" x="3915" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3294" y="0"/>
+<item historyLabel="ResourceManagerActivity.java" index="0">
+<position info="not_deleted" x="3923" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3340" y="0"/>
+<item historyLabel="ServiceManager.java" index="3">
+<position info="not_deleted" x="6058" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3775" y="0"/>
+<item historyLabel="ServiceManager.java" index="3">
+<position info="not_deleted" x="275" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3231" y="0"/>
+<item historyLabel="ResourceManagerActivity.java" index="0">
+<position info="not_deleted" x="3915" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3294" y="0"/>
+<item historyLabel="ServiceManager.java" index="3">
+<position info="not_deleted" x="5969" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3340" y="0"/>
+<item historyLabel="ResourceManagerActivity.java" index="0">
+<position info="not_deleted" x="1674" y="12"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3340" y="0"/>
+<item historyLabel="ServiceManager.java" index="3">
+<position info="not_deleted" x="5969" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3376" y="0"/>
+<item historyLabel="ServiceManager.java" index="3">
+<position info="not_deleted" x="332" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3720" y="0"/>
+<item historyLabel="ResourceManagerActivity.java" index="0">
+<position info="not_deleted" x="3915" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="2434" y="0"/>
+<item historyLabel="CellPhone.java" index="4">
+<position info="not_deleted" x="26" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="2397" y="0"/>
+<item historyLabel="DangerDevice.java" index="1">
+<position info="not_deleted" x="26" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3240" y="0"/>
+<item historyLabel="Device.java" index="5">
+<position info="not_deleted" x="26" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3303" y="0"/>
+<item historyLabel="FixedDevice.java" index="6">
+<position info="not_deleted" x="26" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3349" y="0"/>
+<item historyLabel="Lamp.java" index="7">
+<position info="not_deleted" x="26" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3387" y="0"/>
+<item historyLabel="Local.java" index="8">
+<position info="not_deleted" x="26" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3504" y="0"/>
+<item historyLabel="MeasuringDevice.java" index="9">
+<position info="not_deleted" x="26" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3553" y="0"/>
+<item historyLabel="PresenceSensor.java" index="2">
+<position info="not_deleted" x="26" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3596" y="0"/>
+<item historyLabel="Shower.java" index="10">
+<position info="not_deleted" x="26" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3638" y="0"/>
+<item historyLabel="UnmovedDevice.java" index="11">
+<position info="not_deleted" x="26" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3387" y="0"/>
+<item historyLabel="VisualDevice.java" index="12">
+<position info="not_deleted" x="26" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3504" y="0"/>
+<item historyLabel="CellPhone.java" index="4">
+<position info="not_deleted" x="26" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3553" y="0"/>
+<item historyLabel="Gson.java" index="13">
+<position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="3596" y="0"/>
+<item historyLabel="Gson.java" index="13">
+<position info="not_deleted" x="604" y="25"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="1205" y="0"/>
+<item historyLabel="Gson.java" index="13">
+<position info="not_deleted" x="632" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="1449" y="0"/>
+<item historyLabel="Gson.java" index="13">
+<position info="not_deleted" x="2227" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="571" y="0"/>
+<item historyLabel="ResourceManagerActivity.java" index="0">
+<position info="not_deleted" x="99" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="1517" y="0"/>
+<item historyLabel="ServiceManager.java" index="3">
+<position info="not_deleted" x="443" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="1747" y="0"/>
+<item historyLabel="ResourceManagerActivity.java" index="0">
+<position info="not_deleted" x="99" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="4002" y="0"/>
+<item historyLabel="main.xml" index="14"/>
+<item historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="99" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="4205" y="0"/>
+<item historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="1526" y="0"/>
 </item>
-<item historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="1449" y="0"/>
+<item historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="1598" y="0"/>
 </item>
-<item active="true" historyLabel="ServiceEventClient.java" index="0">
-<position info="not_deleted" x="1449" y="0"/>
+<item historyLabel="InvocationTargetException.class" index="16">
+<position/>
+</item>
+<item historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="1598" y="0"/>
+</item>
+<item historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="3755" y="0"/>
+</item>
+<item historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="1072" y="0"/>
+</item>
+<item historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="1526" y="0"/>
+</item>
+<item historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="1598" y="0"/>
+</item>
+<item historyLabel="InvocationTargetException.class" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ThreadGroup.class" index="17">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="1598" y="0"/>
+</item>
+<item historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="1632" y="49"/>
+</item>
+<item historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="1682" y="94"/>
+</item>
+<item historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="1526" y="0"/>
+</item>
+<item historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="1598" y="0"/>
+</item>
+<item active="true" historyLabel="ResourceManagerActivity.java" index="15">
+<position info="not_deleted" x="1598" y="0"/>
 </item>
 </navigationHistory>
-<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/RemoteServices" type="4"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
@@ -723,44 +818,35 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="CommPortIdentifier.class" tooltip="gnu.io.CommPortIdentifier">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ServiceLayer/C:\/rxtx-2.1-7-bins-r2\/RXTXcomm.jar&lt;gnu.io(CommPortIdentifier.class"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ThreadGroup.class" tooltip="java.lang.ThreadGroup">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=LocalServices/C:\/Android\/android-sdk\/platforms\/android-8\/android.jar&lt;java.lang(ThreadGroup.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JavaServer.java" tooltip="TestServer/src/JavaServer.java">
-<persistable path="/TestServer/src/JavaServer.java"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="InvocationTargetException.class" tooltip="java.lang.reflect.InvocationTargetException">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=LocalServices/C:\/Android\/android-sdk\/platforms\/android-8\/android.jar&lt;java.lang.reflect(InvocationTargetException.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServiceEventClient.java" tooltip="ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceEventClient.java">
-<persistable path="/ServiceLayer/src/br/uff/tempo/nanicolina/services/ServiceEventClient.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Gson.java" tooltip="GsonProject/src/main/java/com/google/gson/Gson.java">
+<persistable path="/GsonProject/src/main/java/com/google/gson/Gson.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="R.java" tooltip="ResourceLayer/gen/br/uff/tempo/nanicolina/resource/R.java">
-<persistable path="/ResourceLayer/gen/br/uff/tempo/nanicolina/resource/R.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UnmovedDevice.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/UnmovedDevice.java">
+<persistable path="/ResourceManager/src/br/uff/tempo/naniclina/resources/UnmovedDevice.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ResourceLayerActivity.java" tooltip="ResourceLayer/src/br/uff/tempo/nanicolina/resource/ResourceLayerActivity.java">
-<persistable path="/ResourceLayer/src/br/uff/tempo/nanicolina/resource/ResourceLayerActivity.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Shower.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/Shower.java">
+<persistable path="/ResourceManager/src/br/uff/tempo/naniclina/resources/Shower.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" tooltip="ServiceLayer/src/br/uff/tempo/nanicolina/jason/Test.java">
-<persistable path="/ServiceLayer/src/br/uff/tempo/nanicolina/jason/Test.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MeasuringDevice.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/MeasuringDevice.java">
+<persistable path="/ResourceManager/src/br/uff/tempo/naniclina/resources/MeasuringDevice.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApplicationManager.java" tooltip="CSRNanicolina/src/br/uff/tempo/nanicolina/csr/ApplicationManager.java">
-<persistable path="/CSRNanicolina/src/br/uff/tempo/nanicolina/csr/ApplicationManager.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Lamp.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/Lamp.java">
+<persistable path="/ResourceManager/src/br/uff/tempo/naniclina/resources/Lamp.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="CSRClient.java.orig" tooltip="CSRNanicolina/src/br/uff/tempo/nanicolina/csr/CSRClient.java.orig">
-<persistable path="/CSRNanicolina/src/br/uff/tempo/nanicolina/csr/CSRClient.java.orig"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FixedDevice.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/FixedDevice.java">
+<persistable path="/ResourceManager/src/br/uff/tempo/naniclina/resources/FixedDevice.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Local.java" tooltip="CSRNanicolina/src/br/uff/tempo/nanicolina/devices/Local.java">
-<persistable path="/CSRNanicolina/src/br/uff/tempo/nanicolina/devices/Local.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CellPhone.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resources/CellPhone.java">
+<persistable path="/ResourceManager/src/br/uff/tempo/naniclina/resources/CellPhone.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VisualDevice.java" tooltip="CSRNanicolina/src/br/uff/tempo/nanicolina/devices/VisualDevice.java">
-<persistable path="/CSRNanicolina/src/br/uff/tempo/nanicolina/devices/VisualDevice.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UnmovedDevice.java" tooltip="CSRNanicolina/src/br/uff/tempo/nanicolina/devices/UnmovedDevice.java">
-<persistable path="/CSRNanicolina/src/br/uff/tempo/nanicolina/devices/UnmovedDevice.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Shower.java" tooltip="CSRNanicolina/src/br/uff/tempo/nanicolina/devices/Shower.java">
-<persistable path="/CSRNanicolina/src/br/uff/tempo/nanicolina/devices/Shower.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PresenceSensor.java" tooltip="CSRNanicolina/src/br/uff/tempo/nanicolina/devices/PresenceSensor.java">
-<persistable path="/CSRNanicolina/src/br/uff/tempo/nanicolina/devices/PresenceSensor.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServiceManager.java" tooltip="ResourceManager/src/br/uff/tempo/naniclina/resourcemanager/ServiceManager.java">
+<persistable path="/ResourceManager/src/br/uff/tempo/naniclina/resourcemanager/ServiceManager.java"/>
 </file>
 </mruList>
 </workbench>
