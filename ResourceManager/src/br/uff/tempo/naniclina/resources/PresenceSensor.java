@@ -33,5 +33,9 @@ public class PresenceSensor extends Device {
         this.presence = val;
     }
 
+    public String toString()
+    {
+    	return super.toString();
+    }
 }
 

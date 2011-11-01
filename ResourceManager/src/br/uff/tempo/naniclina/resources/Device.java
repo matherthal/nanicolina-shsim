@@ -1,5 +1,7 @@
 package br.uff.tempo.naniclina.resources;
 
+import java.util.Scanner;
+
 
 // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
 // #[regen=yes,id=DCE.61AB7880-E331-B0EC-7ED2-DD2CE90A6B9B]
@@ -82,7 +84,52 @@ public class Device {
 	public String toString()
 	{
 		String status = onOff == 0? "off":"on";
-		return "Device: [ name:"+ name+", "+ status +", localization: "+ localization+"]\n";
+		return "Device: [ name:"+ name+", id:"+id+", "+ status +", localization: "+ localization+"]\n";
+	}
+
+	public static Device convert(String format) {
+		// TODO Auto-generated method stub
+		if (format.length()!=0)
+		{	
+			int nameBegin = 0;
+			int nameEnd = 0;
+			int idBegin = 0;
+			int idEnd = 0;
+			int statusEnd =0;
+			int localBegin =0;
+			int localEnd = 0;
+			int i =0;
+			while(format.charAt(i) != ':')
+				i++;
+			i++;
+			nameBegin=i;
+			while(format.charAt(i) != ',')
+				i++;
+			nameEnd = i;
+			i++;
+			while(format.charAt(i) != ':')
+				i++;
+			i++;
+			idBegin=i;
+			while(format.charAt(i) != ',')
+				i++;
+			idEnd = i;
+			i++;
+			
+			while(format.charAt(i) != ',')
+				i++;
+			statusEnd = i;
+			i++;
+			while(format.charAt(i) != ':')
+				i++;
+			i++;
+			localBegin = i;
+			while(format.charAt(i)!=']')
+				i++;
+			localEnd = i;
+			return new Device(format.substring(nameBegin, nameEnd),format.substring(idBegin, idEnd),Integer.valueOf(format.substring(nameEnd+2, statusEnd)),Local.convert(format.substring(localBegin, localEnd)));
+		}
+		else return null;
 	}
 
 

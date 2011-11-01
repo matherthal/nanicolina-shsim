@@ -24,4 +24,26 @@ public class Local {
 		return "x: "+x +", y: "+ y;
 	}
 
+	public static Local convert(String format)
+	{
+		int xBegin = 0;
+		int xEnd =0;
+		int yBegin = 0;
+
+		
+		int i = 0;
+		while(format.charAt(i) != ':')
+			i++;
+		i++;
+		xBegin=i;
+		while(format.charAt(i) != ',')
+			i++;
+		xEnd = i;
+		i++;
+		while(format.charAt(i) != ':')
+			i++;
+		i++;
+		yBegin=i;
+		return new Local(Integer.valueOf(format.substring(xBegin, xEnd)),Integer.valueOf(format.substring(yBegin)));
+	}
 }

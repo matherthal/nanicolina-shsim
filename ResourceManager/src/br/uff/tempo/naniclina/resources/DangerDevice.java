@@ -32,6 +32,11 @@ public class DangerDevice extends Device {
     public void setDanger (boolean val) {
         this.danger = val;
     }
+    
+    public String toString()
+    {
+    	return super.toString();
+    }
 
 }
 

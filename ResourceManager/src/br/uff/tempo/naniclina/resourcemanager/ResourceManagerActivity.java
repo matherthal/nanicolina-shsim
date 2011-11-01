@@ -11,6 +11,7 @@ import br.uff.tempo.naniclina.resources.VisualDevice;
 import br.uff.tempo.naniclina.resources.PresenceSensor;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,9 +22,12 @@ import android.widget.Spinner;
 
 public class ResourceManagerActivity extends Activity {
     /** Called when the activity is first created. */
-    
+	
+	ResourceListener resource;
+	
 	EditText mEditX;
 	EditText mEditY;
+	EditText mEditDevice;
 	
 	Spinner spinner;
 	Spinner spinnerReg;
@@ -78,8 +82,12 @@ public class ResourceManagerActivity extends Activity {
         Button button = (Button) findViewById(R.id.button2);
         button.setOnClickListener(mRegisterListener);
         button = (Button) findViewById(R.id.button3);
+        button.setOnClickListener(mSearchResource);
         mEditX = (EditText) findViewById(R.id.editText1);
         mEditY = (EditText) findViewById(R.id.editText2);
+        mEditDevice = (EditText) findViewById(R.id.editText3);
+        resource = new ResourceListener(this,10006); 
+        //resource.start();
         /*ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this, R.array.planets_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -98,4 +106,29 @@ public class ResourceManagerActivity extends Activity {
             registeredRes.add(dev);
         }
     };
+    
+    private OnClickListener mSearchResource = new OnClickListener() {
+        public void onClick(View v) {
+        	 String resName = (String) spinnerReg.getSelectedItem();
+        	 setText(searchDevice(resName).toString());
+        }
+    };
+    
+    private Device searchDevice(String id)
+    {
+    	int i = 0;
+    	for (; i< registeredRes.size() && !id.equals(registeredRes.get(i).getId()); i++)
+    	{}
+    	return registeredRes.get(i);
+    }
+    
+    public Context getRegisterListener()
+    {
+    	return (Context) mRegisterListener;
+    }
+
+	public void setText(String strDevice) {
+		// TODO Auto-generated method stub
+		mEditDevice.setText(strDevice);
+	}
 }
