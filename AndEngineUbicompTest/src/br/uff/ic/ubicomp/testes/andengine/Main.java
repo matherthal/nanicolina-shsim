@@ -35,8 +35,8 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 // ===========================================================
 // Constants			
 // ===========================================================
-	private static final int CAMERA_WIDTH = 400;
-	private static final int CAMERA_HEIGHT = 400;
+	//private static final int CAMERA_WIDTH = 400;
+	//private static final int CAMERA_HEIGHT = 400;
 	private static final String TAG = "Ubicomp";
 	
 	private static final int LAYER_COUNT = 5;
@@ -92,7 +92,6 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 	@Override
 	public void onLoadComplete() {
 		Log.d(TAG, "Fim do carregamento");
-		
 	}
 
 	@Override
@@ -101,8 +100,8 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 		Log.d(TAG, "Carregando engine");
 		
 		Display display = getWindowManager().getDefaultDisplay();
-		this.mCameraWidth = display.getWidth();
-		this.mCameraHeight = display.getHeight();
+		this.mCameraWidth = 299;//display.getWidth();
+		this.mCameraHeight = 327;//display.getHeight();
 		
 		Log.d(TAG, "Cam W: " + this.mCameraWidth + ", Cam H: " + this.mCameraHeight);
 		
@@ -163,12 +162,11 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
         final int centerX = (this.mCameraWidth - this.mSpriteRegion.getWidth()) / 2;
         final int centerY = (this.mCameraHeight - this.mSpriteRegion.getHeight()) / 2;
         
-		
+		//criando camadas na cena
 		for (int i = 0; i < LAYER_COUNT; i++) {
 			this.mScene.attachChild(new Entity());
 		}
 		
-		this.mScene.setBackground(new ColorBackground(1, 1, 1));
 		this.mScene.setBackgroundEnabled(false);
         this.mScene.getChild(LAYER_FUNDO).attachChild(new Sprite(0, 0, this.mBackgroundTextureRegion));
         
@@ -199,7 +197,7 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
         
         createItem(this.mFogaoTextureRegionItem, 10);
         createItem(this.mGeladeiraTextureRegionItem, 40);
-        createItem(this.mNoteBookTextureRegionItem, 70);
+        createItem(this.mNoteBookTextureRegionItem, 90);
 
         this.mScene.setTouchAreaBindingEnabled(true);
 		
