@@ -75,10 +75,24 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 	//scene
 	private Scene mScene;
 
+	private static ChangeableText sText;
+	private static Scene sScene;
 // ===========================================================
 // Constructors
 // ===========================================================
- 
+	//Singleton
+	private static Main instance = null;
+	
+	protected Main() {
+		// Exists only to defeat instantiation.
+	}
+
+	public static Main getInstance() {
+		if(instance == null) {
+			instance = new Main();
+		}
+		return instance;
+	}
 
 // ===========================================================
 // Getter & Setter
@@ -178,14 +192,20 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
         //sprite do paciente
         sprite = new Sprite(centerX, centerY, this.mSpriteRegion) {
             @Override
-            public boolean onAreaTouched(final TouchEvent pSceneTouchEvent, final float pTouchAreaLocalX, final float pTouchAreaLocalY) {
+            public boolean onAreaTouched(final TouchEvent pSceneTouchEvent, final float pTouchAreaLocalX, final float pTouchAreaLocalY) {            	
+            	float x = pSceneTouchEvent.getX();
+            	float y = pSceneTouchEvent.getY();
+            	String onde = locate(x, y);
             	
-            	
-            	String onde = locate(pSceneTouchEvent.getX(), pSceneTouchEvent.getY());
-            	
-            	text.setText(onde);
-                this.setPosition(pSceneTouchEvent.getX() - this.getWidth() / 2, pSceneTouchEvent.getY() - this.getHeight() / 2);
+            	//text.setText(onde);
+            	float width = this.getWidth();
+            	float height = this.getHeight();
+                this.setPosition(x - width / 2, y - height / 2);
                     
+                //text.setText("Calling interpreter1");
+                new EventsInterpreter();
+                EventsInterpreter.onLocationChanged(onde);
+                
                 return true;
             }
 
@@ -283,5 +303,15 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
         
         this.mScene.getChild(LAYER_OBJETOS).attachChild(sprite);	
         this.mScene.registerTouchArea(sprite);
+	}
+	
+	public static boolean SendMessage(String msg) {
+		try {
+			sText.setText(msg);
+		}
+		catch (Exception e) {
+			return false;
+		}
+		return true;
 	}
 }
