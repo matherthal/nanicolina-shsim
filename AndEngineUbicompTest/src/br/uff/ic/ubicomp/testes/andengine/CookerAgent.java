@@ -5,4 +5,12 @@ public class CookerAgent extends Resource {
 		super.name = "CookerAgent";
 		super.properties.add(new ModeOnOff());
 	}
+	
+	public void turnCookerOn() {
+		
+	}
+	
+	public void turnCookerOff() {
+		
+	}
 }
