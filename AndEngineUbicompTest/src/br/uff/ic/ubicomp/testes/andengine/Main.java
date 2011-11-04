@@ -75,8 +75,7 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 	//scene
 	private Scene mScene;
 
-	private static ChangeableText sText;
-	private static Scene sScene;
+	private EventsInterpreter eventsInterpreter;
 // ===========================================================
 // Constructors
 // ===========================================================
@@ -85,6 +84,8 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 	
 	protected Main() {
 		// Exists only to defeat instantiation.
+		//Get instance of the singleton EventsInterpreter
+		eventsInterpreter = EventsInterpreter.getInstance();
 	}
 
 	public static Main getInstance() {
@@ -203,8 +204,7 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
                 this.setPosition(x - width / 2, y - height / 2);
                     
                 //text.setText("Calling interpreter1");
-                new EventsInterpreter();
-                EventsInterpreter.onLocationChanged(onde);
+                eventsInterpreter.onLocationChanged(onde);
                 
                 return true;
             }
@@ -305,9 +305,9 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
         this.mScene.registerTouchArea(sprite);
 	}
 	
-	public static boolean SendMessage(String msg) {
+	public boolean SendMessage(String msg) {
 		try {
-			sText.setText(msg);
+			text.setText(msg);
 		}
 		catch (Exception e) {
 			return false;
