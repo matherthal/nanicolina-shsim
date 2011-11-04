@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move element &apos;DeviceServer.java&apos; to &apos;ResourceLayer/src/br.uff.tempo.nanicolina.resource&apos;&#x0D;&#x0A;- Original project: &apos;ResourceLayerTemp&apos;&#x0D;&#x0A;- Destination element: &apos;ResourceLayer/src/br.uff.tempo.nanicolina.resource&apos;&#x0D;&#x0A;- Original element: &apos;br.uff.tempo.nanicolina.device.DeviceServer.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=ResourceLayer/src&lt;br.uff.tempo.nanicolina.resource" element1="/src&lt;br.uff.tempo.nanicolina.device{DeviceServer.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1317496194165" units="1" version="1.0"/>
-</session>
