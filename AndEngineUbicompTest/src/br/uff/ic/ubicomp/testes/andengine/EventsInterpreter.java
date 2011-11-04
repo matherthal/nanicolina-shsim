@@ -19,7 +19,7 @@ public class EventsInterpreter {
 	
 	protected EventsInterpreter(){
 		//Get reference to the environment representation
-		environment = Main.getInstance();
+		//environment = Main.getInstance();
 		
 		//Creating resource Cooker
 		Resource cooker = new Resource();
@@ -84,7 +84,7 @@ public class EventsInterpreter {
 				
 				if (found) {
 					modeProp.state = "off"; //TODO: how CookerAgent can be a service and a resource at the same time?
-					environment.SendMessage("Desligando fogão");
+					//environment.SendMessage("Desligando fogão");
 					System.out.println("Desligando fogão! Aeee!");
 				//	if (modeProp.state.equals("on"))
 				//		modePr
