@@ -4,14 +4,23 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import android.R.bool;
+import android.os.Environment;
 import android.provider.Browser.BookmarkColumns;
 
 public class EventsInterpreter {
-	private static ArrayList<Resource> contextRepository = new ArrayList<Resource>();
+	private ArrayList<Resource> contextRepository = new ArrayList<Resource>();
 	
-	private static ArrayList<Service> services = new ArrayList<Service>();
+	private ArrayList<Service> services = new ArrayList<Service>();
 	
-	EventsInterpreter(){
+	private Main environment;
+	
+	//Singleton
+	private static EventsInterpreter instance = null;
+	
+	protected EventsInterpreter(){
+		//Get reference to the environment representation
+		environment = Main.getInstance();
+		
 		//Creating resource Cooker
 		Resource cooker = new Resource();
 		cooker.name = "cooker";
@@ -24,8 +33,16 @@ public class EventsInterpreter {
 		//Adding resource into the context repository
 		contextRepository.add(cooker);
 	}
+
+	public static EventsInterpreter getInstance() {
+		if(instance == null) {
+			instance = new EventsInterpreter();
+		}
+		return instance;
+	}
+	//	
 	
-	public static void onLocationChanged(String location) {
+	public void onLocationChanged(String location) {
 		//TODO: create methods to cover these repetitive codes
 		if (location.equals("Quarto 1")) {
 			//Find Resource Cooker on Context Repository
@@ -60,13 +77,14 @@ public class EventsInterpreter {
 						modeProp = propIter.next();
 						//Searching based on the name of the service
 						if (modeProp.name.equals("on/off"))
-							found = true;
+							if (modeProp.state.equals("on"))
+								found = true;
 					}
 				}
 				
 				if (found) {
 					modeProp.state = "off"; //TODO: how CookerAgent can be a service and a resource at the same time?
-					Main.SendMessage("Desligando fogão");
+					environment.SendMessage("Desligando fogão");
 					System.out.println("Desligando fogão! Aeee!");
 				//	if (modeProp.state.equals("on"))
 				//		modePr
