@@ -75,7 +75,7 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 	//scene
 	private Scene mScene;
 
-	private EventsInterpreter eventsInterpreter;
+	private EventsBus eventsInterpreter;
 // ===========================================================
 // Constructors
 // ===========================================================
