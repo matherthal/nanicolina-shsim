@@ -208,7 +208,6 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
                 
                 return true;
             }
-
         };
      
         this.mScene.setOnSceneTouchListener(this);
@@ -288,6 +287,8 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
         		if (pSceneTouchEvent.isActionUp()) {
         			if (x < 250) {
             			createObject(x, y, this);
+            			//Call registry
+            			//...
             		}
         			this.setPosition(getInitialX(), getInitialY());
         		}
