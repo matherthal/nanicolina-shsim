@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;br.uff.tempo.nanicolina.resource.DeviceServer&apos; to &apos;ResourceServer&apos;&#x0D;&#x0A;- Original project: &apos;ResourceLayer&apos;&#x0D;&#x0A;- Original element: &apos;br.uff.tempo.nanicolina.resource.DeviceServer&apos;&#x0D;&#x0A;- Renamed element: &apos;br.uff.tempo.nanicolina.resource.ResourceServer&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DeviceServer&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;br.uff.tempo.nanicolina.resource{DeviceServer.java[DeviceServer" matchStrategy="1" name="ResourceServer" qualified="false" references="true" similarDeclarations="false" stamp="1317496213801" textual="false" version="1.0"/>
+</session>
