@@ -1,0 +1,20 @@
+package br.uff.ic.ubicomp.testes.knowledge;
+
+interface IMyResourceService {
+		
+		String getName();
+		
+		void setName(String name);		
+		
+		String getId();
+		
+		String getLocation();
+		
+		void setLocation(int x, int y);
+		
+		void setOn();
+		
+		void setOff();
+		
+		boolean isOn();
+}
