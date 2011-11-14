@@ -1,0 +1,14 @@
+package br.uff.ic.ubicomp.testes.base;
+
+interface IMyResourceService {
+		
+		String getName()
+				
+		String getId()
+		
+		Local getLocation()
+		
+		void setOn()
+		
+		void setOff()
+}
