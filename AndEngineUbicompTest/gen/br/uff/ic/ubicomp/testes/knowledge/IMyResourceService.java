@@ -51,10 +51,10 @@ java.lang.String _arg1;
 _arg1 = data.readString();
 int _arg2;
 _arg2 = data.readInt();
-int _arg3;
-_arg3 = data.readInt();
-int _arg4;
-_arg4 = data.readInt();
+float _arg3;
+_arg3 = data.readFloat();
+float _arg4;
+_arg4 = data.readFloat();
 this.createResource(_arg0, _arg1, _arg2, _arg3, _arg4);
 reply.writeNoException();
 return true;
@@ -85,7 +85,7 @@ public java.lang.String getInterfaceDescriptor()
 {
 return DESCRIPTOR;
 }
-public void createResource(java.lang.String name, java.lang.String id, int onOff, int x, int y) throws android.os.RemoteException
+public void createResource(java.lang.String name, java.lang.String id, int onOff, float x, float y) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -94,8 +94,8 @@ _data.writeInterfaceToken(DESCRIPTOR);
 _data.writeString(name);
 _data.writeString(id);
 _data.writeInt(onOff);
-_data.writeInt(x);
-_data.writeInt(y);
+_data.writeFloat(x);
+_data.writeFloat(y);
 mRemote.transact(Stub.TRANSACTION_createResource, _data, _reply, 0);
 _reply.readException();
 }
@@ -125,6 +125,6 @@ return _result;
 static final int TRANSACTION_createResource = (android.os.IBinder.FIRST_CALL_TRANSACTION + 0);
 static final int TRANSACTION_getResource = (android.os.IBinder.FIRST_CALL_TRANSACTION + 1);
 }
-public void createResource(java.lang.String name, java.lang.String id, int onOff, int x, int y) throws android.os.RemoteException;
+public void createResource(java.lang.String name, java.lang.String id, int onOff, float x, float y) throws android.os.RemoteException;
 public java.lang.String getResource() throws android.os.RemoteException;
 }

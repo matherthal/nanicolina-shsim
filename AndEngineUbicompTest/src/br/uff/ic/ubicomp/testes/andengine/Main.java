@@ -25,10 +25,22 @@ import org.anddev.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlasTextur
 import org.anddev.andengine.opengl.texture.region.TextureRegion;
 import org.anddev.andengine.ui.activity.BaseGameActivity;
 
+import br.uff.ic.ubicomp.testes.base.Position;
+import br.uff.ic.ubicomp.testes.base.Resource;
+import br.uff.ic.ubicomp.testes.knowledge.IMyResourceService;
+import br.uff.ic.ubicomp.testes.knowledge.ResourceDirectory;
+
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.os.IBinder;
+import android.os.RemoteException;
 import android.util.Log;
 import android.view.Display;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Main extends BaseGameActivity implements IOnSceneTouchListener, IScrollDetectorListener {
@@ -45,7 +57,8 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 	private static final int LAYER_PACIENTE = LAYER_OBJETOS + 1;
 	private static final int LAYER_TOOLS = LAYER_PACIENTE + 1;
 	private static final int LAYER_TEXTO = LAYER_TOOLS + 1;
-
+	
+	
 // ===========================================================
 // Fields
 // ===========================================================
@@ -79,21 +92,11 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 // ===========================================================
 // Constructors
 // ===========================================================
-	//Singleton
-	/*private static Main instance = null;
-	
-	Main() {
-		// Exists only to defeat instantiation.
-		//Get instance of the singleton EventsInterpreter
-		//eventsInterpreter = EventsInterpreter.getInstance();
-	}
+	//Auto referência
 
-	public static Main getInstance() {
-		if(instance == null) {
-			instance = new Main();
-		}
-		return instance;
-	}*/
+	private IMyResourceService remoteService;
+	
+	
 
 // ===========================================================
 // Getter & Setter
@@ -290,8 +293,34 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
         		if (pSceneTouchEvent.isActionUp()) {
         			if (x < 250) {
             			createObject(x, y, this);
-            			//Call registry
-            			//...
+            			ResourceDirectory dir = new ResourceDirectory();
+            			br.uff.ic.ubicomp.testes.base.Resource resource = new br.uff.ic.ubicomp.testes.base.Resource("fogão", "f01", 0, new Position(x, y));
+            			updateServiceStatus();
+            			startService();
+            			updateServiceStatus();
+            			bindService();
+            			updateServiceStatus();
+            			try {
+            				while (remoteService == null)
+            				{}
+            				remoteService.createResource(resource.getName(), resource.getId(), resource.getOnOff(),
+            						resource.getLocalization().getX(), resource.getLocalization().getY());
+            			} catch (RemoteException e) {
+            				// TODO Auto-generated catch block
+            				e.printStackTrace();
+            				Log.d( getClass().getSimpleName(), "Not Registered..." );
+            			}
+            			updateServiceStatus();
+            			try {
+            				String resStr = remoteService.getResource();
+            				Log.d( getClass().getSimpleName(), "Registered..."+resStr );
+            				Resource res = Resource.convert(resStr);
+							Log.d( getClass().getSimpleName(), "Registered..."+res.toString() );
+						} catch (RemoteException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+            			//dir.addResource(resource);
             		}
         			this.setPosition(getInitialX(), getInitialY());
         		}
@@ -318,4 +347,99 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 		}
 		return true;
 	}
+	private void startService(){
+   		if (started){
+   			Toast.makeText(this, "Service already started", Toast.LENGTH_SHORT).show();
+   		}else{
+   			Intent i = new Intent("br.uff.ic.ubicomp.testes.knowledge.REMOTE_SERVICE");
+   			//i.setClassName("br.uff.ic.ubicomp.testes.knowledge", "br.uff.ic.ubicomp.testes.knowledge.ResourceAgent");
+   			startService(i);
+   			started = true;
+   			updateServiceStatus();
+   			Log.d( getClass().getSimpleName(), "startService()" );
+   		}
+   		
+	}
+   
+	private void stopService() {
+  		if (!started) {
+   			Toast.makeText(this, "Service not yet started", Toast.LENGTH_SHORT).show();
+  		} else {
+   			Intent i = new Intent("br.uff.ic.ubicomp.testes.knowledge.REMOTE_SERVICE");
+   			//i.setClassName("br.uff.ic.ubicomp.testes.knowledge", "br.uff.ic.ubicomp.testes.knowledge.ResourceAgent");
+   			stopService(i);
+   			started = false;
+   			updateServiceStatus();
+   			Log.d( getClass().getSimpleName(), "stopService()" );
+  		}
+	}
+  
+	private void bindService() {
+		if(conn == null) {
+			conn = new RemoteServiceConnection();
+			Intent i = new Intent("br.uff.ic.ubicomp.testes.knowledge.REMOTE_SERVICE");
+			//i.setClassName("br.uff.ic.ubicomp.testes.knowledge", "br.uff.ic.ubicomp.testes.knowledge.ResourceAgent");
+			bindService(i, conn, Context.BIND_AUTO_CREATE);
+			updateServiceStatus();
+			Log.d( getClass().getSimpleName(), "bindService()" );
+		} else {
+	        Toast.makeText(this, "Cannot bind - service already bound", Toast.LENGTH_SHORT).show();
+		}
+	}
+	boolean started;
+	private RemoteServiceConnection conn = null;
+	private void releaseService() {
+		if(conn != null) {
+			unbindService(conn);
+			conn = null;
+			updateServiceStatus();
+			Log.d( getClass().getSimpleName(), "releaseService()" );
+		} else {
+			Toast.makeText(this, "Cannot unbind - service not bound", Toast.LENGTH_SHORT).show();
+		}
+	}
+    
+	/*private void invokeService() {
+		if(conn == null) {
+			Toast.makeText(this, "Cannot invoke - service not bound", Toast.LENGTH_SHORT).show();
+		} else {
+			try {
+				int counter = remoteService.getCounter();
+				  TextView t = (TextView)findViewById(R.id.notApplicable);
+				  t.setText( "Counter value: "+Integer.toString( counter ) );
+				  Log.d( getClass().getSimpleName(), "invokeService()" );
+			} catch (RemoteException re) {
+				Log.e( getClass().getSimpleName(), "RemoteException" );
+			}
+		}
+   	}*/	        	
+	private void updateServiceStatus() {
+  	  String bindStatus = conn == null ? "unbound" : "bound";
+  	  String startStatus = started ? "started" : "not started";
+  	  String remoteStatus = remoteService == null ? "not instance" : "instance";
+  	  String statusText;
+	  statusText = "Service status: "+
+								bindStatus+
+								","+
+								startStatus+
+								remoteStatus;
+      //TextView t = (TextView)findViewById(R.id.serviceStatus);
+  	  //t.setText( statusText );	
+    }
+  
+	public class RemoteServiceConnection implements ServiceConnection {
+		  
+		  public void onServiceConnected(ComponentName className, 
+				IBinder boundService ) {
+	        remoteService = IMyResourceService.Stub.asInterface((IBinder)boundService);
+	        //TextView t = (TextView)findViewById(R.id.notApplicable);
+			//t.setText( "Service Connected:"+remoteService );
+	        Log.d( getClass().getSimpleName(), "onServiceConnected()" );
+	      }
+
+	      public void onServiceDisconnected(ComponentName className) {
+	        remoteService = null;
+			   Log.d( getClass().getSimpleName(), "onServiceDisconnected" );
+	      }
+	 };
 }
