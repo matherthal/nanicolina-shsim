@@ -111,6 +111,7 @@ public class Resource {
 			int localEnd = 0;
 			int i =0;
 			i = thresholdLimit(format,':',i);
+			i = thresholdLimit(format,':',i+1);
 			nameBegin=i;
 			i = thresholdLimit(format,',',i);
 			nameEnd = i-1;
@@ -124,7 +125,11 @@ public class Resource {
 			localBegin = i;
 			i = thresholdLimit(format,']',i);
 			localEnd = i-1;
-			return new Resource(format.substring(nameBegin, nameEnd),format.substring(idBegin, idEnd),Integer.valueOf(format.substring(nameEnd+2, statusEnd)),Position.convert(format.substring(localBegin, localEnd)));
+			String nome = format.substring(nameBegin, nameEnd);
+			String id = format.substring(idBegin, idEnd);
+			String onOffStr = format.substring(idEnd+2, statusEnd);
+			int onOff = onOffStr.equals("on")? 1:0;
+			return new Resource(nome,id,onOff,Position.convert(format.substring(localBegin, localEnd)));
 		}
 		else return null;
 	}

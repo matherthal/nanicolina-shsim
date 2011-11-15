@@ -14,6 +14,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+		<service android:name="br.uff.ic.ubicomp.testes.knowledge.ResourceAgent" android:exported="true">
+            <intent-filter>
+            	<action android:name="br.uff.ic.ubicomp.testes.knowledge.REMOTE_SERVICE"/>
+      		</intent-filter>
+        </service>
     </application>
 </manifest>

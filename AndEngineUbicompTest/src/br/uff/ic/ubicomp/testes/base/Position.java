@@ -4,20 +4,20 @@ import java.util.ArrayList;
 
 public class Position {
 	
-	private int x;
-	private int y;
+	private float x;
+	private float y;
 	
-	public Position(int x, int y)
+	public Position(float x, float y)
 	{
 		this.x = x;
 		this.y = y;		
 	}
 	
-	public int getX() {
+	public float getX() {
 		return x;
 	}
 
-	public int getY() {
+	public float getY() {
 		return y;
 	}
 	
@@ -46,6 +46,6 @@ public class Position {
 			i++;
 		i++;
 		yBegin=i;
-		return new Position(Integer.valueOf(format.substring(xBegin, xEnd)),Integer.valueOf(format.substring(yBegin)));
+		return new Position(Float.valueOf(format.substring(xBegin, xEnd)),Float.valueOf(format.substring(yBegin)));
 	}
 }

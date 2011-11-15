@@ -3,6 +3,8 @@ package br.uff.ic.ubicomp.testes.andengine;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import br.uff.ic.ubicomp.testes.base.Resource;
+
 import android.R.bool;
 import android.os.Environment;
 import android.provider.Browser.BookmarkColumns;
@@ -23,13 +25,11 @@ public class EventsInterpreter {
 		
 		//Creating resource Cooker
 		CookerAgent cooker = new CookerAgent();
-		cooker.name = "cooker";
+		cooker.setName("cooker");
 		//Creating resource property of Cooker
-		ResourceProperty rp = new ResourceProperty();
-		rp.name = "on/off";
-		rp.state = "on";
+		
 		//Associating resource property with the resource
-		cooker.properties.add(rp);
+		cooker.setOnOff(1);
 		//Adding resource into the context repository
 		contextRepository.add(cooker);
 	}
@@ -54,13 +54,13 @@ public class EventsInterpreter {
 			//Stop the search if found or if the list has ended
 			while (!found & resIter.hasNext()) {
 				res = resIter.next();
-				if (res.name.equals("cooker")) {//Resource found
+				if (res.getName().equals("cooker")) {//Resource found
 					cookerAgent = (CookerAgent)res; 
 					found = true;
 				}
 			}
 			
-			if (found) { //If the resource was found
+			/*if (found) { //If the resource was found
 				ResourceProperty prop = null;
 				Iterator<ResourceProperty> propIter = cookerAgent.properties.iterator();
 				found = false;					
@@ -69,16 +69,16 @@ public class EventsInterpreter {
 					//Searching based on the name of the service
 					if (prop.name.equals("on/off"))						
 						found = true;
-				}
+				}*/
 				
-				if (found) {
-					if (prop.state.equals("on")) {//ECA condition attended
+				//if (found) {
+					if (cookerAgent.getOnOff()== 1) {//ECA condition attended
 						cookerAgent.turnCookerOff(); //Action	
 						return "Fogão desligado!";
 					}
-				}
+				//}
 			}
-		}
+		//}
 		return "Nenhuma ação";
 	}
 }
