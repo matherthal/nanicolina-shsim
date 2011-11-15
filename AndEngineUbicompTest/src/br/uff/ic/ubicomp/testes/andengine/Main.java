@@ -92,10 +92,10 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 // ===========================================================
 // Constructors
 // ===========================================================
-	//Auto referência
-
-	private IMyResourceService remoteService;
 	
+	public IMyResourceService remoteService;
+	private ResourceDirectory resourceDir = new ResourceDirectory(this);
+	private int i =0 ;
 	
 
 // ===========================================================
@@ -293,34 +293,10 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
         		if (pSceneTouchEvent.isActionUp()) {
         			if (x < 250) {
             			createObject(x, y, this);
-            			ResourceDirectory dir = new ResourceDirectory();
-            			br.uff.ic.ubicomp.testes.base.Resource resource = new br.uff.ic.ubicomp.testes.base.Resource("fogão", "f01", 0, new Position(x, y));
-            			updateServiceStatus();
-            			startService();
-            			updateServiceStatus();
-            			bindService();
-            			updateServiceStatus();
-            			try {
-            				while (remoteService == null)
-            				{}
-            				remoteService.createResource(resource.getName(), resource.getId(), resource.getOnOff(),
-            						resource.getLocalization().getX(), resource.getLocalization().getY());
-            			} catch (RemoteException e) {
-            				// TODO Auto-generated catch block
-            				e.printStackTrace();
-            				Log.d( getClass().getSimpleName(), "Not Registered..." );
-            			}
-            			updateServiceStatus();
-            			try {
-            				String resStr = remoteService.getResource();
-            				Log.d( getClass().getSimpleName(), "Registered..."+resStr );
-            				Resource res = Resource.convert(resStr);
-							Log.d( getClass().getSimpleName(), "Registered..."+res.toString() );
-						} catch (RemoteException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-            			//dir.addResource(resource);
+            			i++;
+            			String id = "f"+i;
+            			Resource resource = new Resource("fogão", id, 0, new Position(x, y));
+            			resourceDir.addResource(resource);
             		}
         			this.setPosition(getInitialX(), getInitialY());
         		}
@@ -347,9 +323,9 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 		}
 		return true;
 	}
-	private void startService(){
-   		if (started){
-   			Toast.makeText(this, "Service already started", Toast.LENGTH_SHORT).show();
+	/*public void startService(){
+   		if (false){
+   			Log.d( getClass().getSimpleName(), "Service already started" );
    		}else{
    			Intent i = new Intent("br.uff.ic.ubicomp.testes.knowledge.REMOTE_SERVICE");
    			//i.setClassName("br.uff.ic.ubicomp.testes.knowledge", "br.uff.ic.ubicomp.testes.knowledge.ResourceAgent");
@@ -361,9 +337,9 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
    		
 	}
    
-	private void stopService() {
+	public void stopService() {
   		if (!started) {
-   			Toast.makeText(this, "Service not yet started", Toast.LENGTH_SHORT).show();
+  			Log.d( getClass().getSimpleName(),"Service not yet started");
   		} else {
    			Intent i = new Intent("br.uff.ic.ubicomp.testes.knowledge.REMOTE_SERVICE");
    			//i.setClassName("br.uff.ic.ubicomp.testes.knowledge", "br.uff.ic.ubicomp.testes.knowledge.ResourceAgent");
@@ -374,7 +350,7 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
   		}
 	}
   
-	private void bindService() {
+	public void bindService() {
 		if(conn == null) {
 			conn = new RemoteServiceConnection();
 			Intent i = new Intent("br.uff.ic.ubicomp.testes.knowledge.REMOTE_SERVICE");
@@ -383,12 +359,12 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 			updateServiceStatus();
 			Log.d( getClass().getSimpleName(), "bindService()" );
 		} else {
-	        Toast.makeText(this, "Cannot bind - service already bound", Toast.LENGTH_SHORT).show();
+			Log.d( getClass().getSimpleName(), "Cannot bind - service already bound" );
 		}
 	}
 	boolean started;
 	private RemoteServiceConnection conn = null;
-	private void releaseService() {
+	public void releaseService() {
 		if(conn != null) {
 			unbindService(conn);
 			conn = null;
@@ -413,7 +389,7 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 			}
 		}
    	}*/	        	
-	private void updateServiceStatus() {
+	/*public void updateServiceStatus() {
   	  String bindStatus = conn == null ? "unbound" : "bound";
   	  String startStatus = started ? "started" : "not started";
   	  String remoteStatus = remoteService == null ? "not instance" : "instance";
@@ -425,9 +401,9 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 								remoteStatus;
       //TextView t = (TextView)findViewById(R.id.serviceStatus);
   	  //t.setText( statusText );	
-    }
+    }*/
   
-	public class RemoteServiceConnection implements ServiceConnection {
+	/*public class RemoteServiceConnection implements ServiceConnection {
 		  
 		  public void onServiceConnected(ComponentName className, 
 				IBinder boundService ) {
@@ -441,5 +417,5 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 	        remoteService = null;
 			   Log.d( getClass().getSimpleName(), "onServiceDisconnected" );
 	      }
-	 };
+	 };*/
 }
