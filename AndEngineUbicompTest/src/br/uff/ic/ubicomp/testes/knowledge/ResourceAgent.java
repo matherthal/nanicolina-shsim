@@ -22,10 +22,11 @@ public class ResourceAgent extends Service{
 	@Override
 	public IBinder onBind(Intent arg0) {
 		Log.d(getClass().getSimpleName(), "onBind()");
-		return myResourceServiceStub;
+		return new ResourceImpl();
 	}
 
-	private IMyResourceService.Stub myResourceServiceStub = new IMyResourceService.Stub() {
+	private class ResourceImpl extends IMyResourceService.Stub {
+		
 		
 		public void createResource(String name, String id, int onOff, float x, float y)
 		{
