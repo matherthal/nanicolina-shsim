@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: C:\\Users\\Mareli\\nanicolina-shsim\\RemoteService\\src\\com\\collabera\\labs\\sai\\IMyRemoteService.aidl
+ * Original file: C:\\Users\\Mareli\\workspace\\nanicolina-shsim\\RemoteService\\src\\com\\collabera\\labs\\sai\\IMyRemoteService.aidl
  */
 package com.collabera.labs.sai;
 public interface IMyRemoteService extends android.os.IInterface
