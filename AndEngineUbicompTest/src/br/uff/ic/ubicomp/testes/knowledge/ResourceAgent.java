@@ -1,6 +1,7 @@
 package br.uff.ic.ubicomp.testes.knowledge;
 
 
+import br.uff.ic.ubicomp.testes.andengine.Main;
 import br.uff.ic.ubicomp.testes.base.Resource;
 import br.uff.ic.ubicomp.testes.base.Position;
 import br.uff.ic.ubicomp.testes.knowledge.EntityAgent.Task;
@@ -11,22 +12,24 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
+import android.widget.Toast;
 
 
 public class ResourceAgent extends Service{
 	
-	private Resource resource;
+	
 	private Task myTask = new Task();
 	
 
 	@Override
 	public IBinder onBind(Intent arg0) {
 		Log.d(getClass().getSimpleName(), "onBind()");
+		Toast.makeText(this, "onBind()", Toast.LENGTH_LONG).show();
 		return new ResourceImpl();
 	}
 
 	private class ResourceImpl extends IMyResourceService.Stub {
-		
+		private Resource resource;
 		
 		public void createResource(String name, String id, int onOff, float x, float y)
 		{
@@ -68,7 +71,7 @@ public class ResourceAgent extends Service{
 	
 	class Task implements Runnable {
 		public void run() {
-			serviceHandler.postDelayed(this,1000L);
+			//serviceHandler.postDelayed(this,1000L);
 			Log.i(getClass().getSimpleName(), "Incrementing counter in the run method");
 		}
 	}
