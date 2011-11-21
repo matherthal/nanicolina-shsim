@@ -41,6 +41,8 @@ public class ResourceDirectory{
 	
 	public void addResource(Resource resource)
 	{
+		remoteService = null;
+		conn = null;
 		updateServiceStatus();
 		startService();
 		updateServiceStatus();
@@ -69,12 +71,26 @@ public class ResourceDirectory{
 		resources.put(resource.getId(),remoteService);
 		Log.d( getClass().getSimpleName(), "Adding... "+resources.size() );
 	}
+	
+	public Resource getResource(String id)
+	{
+		try {
+			return Resource.convert(resources.get(id).getResource());
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Log.d( getClass().getSimpleName(), "RemoteExcption") ;
+			return null;
+		}
+	}
+	
 	public void startService(){
    		if (false){
    			Log.d( getClass().getSimpleName(), "Service already started" );
    		}else{
-   			Intent i = new Intent("br.uff.ic.ubicomp.testes.knowledge.REMOTE_SERVICE");
-   			//i.setClassName("br.uff.ic.ubicomp.testes.knowledge", "br.uff.ic.ubicomp.testes.knowledge.ResourceAgent");
+   			
+   			Intent i = new Intent();
+   			i.setClassName("br.uff.ic.ubicomp.testes.knowledge", "REMOTE_SERVICE");
    			instance.startService(i);
    			started = true;
    			updateServiceStatus();
@@ -100,7 +116,6 @@ public class ResourceDirectory{
 		if(true) {
 			conn = new RemoteServiceConnection();
 			Intent i = new Intent("br.uff.ic.ubicomp.testes.knowledge.REMOTE_SERVICE");
-			//i.setClassName("br.uff.ic.ubicomp.testes.knowledge", "br.uff.ic.ubicomp.testes.knowledge.ResourceAgent");
 			instance.bindService(i, conn, Context.BIND_AUTO_CREATE);
 			updateServiceStatus();
 			Log.d( getClass().getSimpleName(), "bindService()" );
@@ -162,6 +177,8 @@ public class ResourceDirectory{
 			   Log.d( getClass().getSimpleName(), "onServiceDisconnected" );
 	      }
 	 };
+	 
+	 
   
 
 }
