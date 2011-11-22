@@ -49,7 +49,7 @@ public class DiscoveryService extends ResourceAgent {
         //Database steps
         Entity entity;
         //Database step
-        LocalizationService localization = LocalizationService.getInstance();
+        LocalizationService localization = LocalizationService.getInstance("SLS","localhost");
         List<Local> locals = localization.getMap();
         Local loc = null;
         for (Local l : locals)

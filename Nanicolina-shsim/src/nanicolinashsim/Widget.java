@@ -9,7 +9,8 @@ public class Widget extends Entity {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.A1378CBC-0507-6733-7C90-19E333816013]
     // </editor-fold> 
-    public Widget () {
+    public Widget (String URN, String URL, Position position) {
+        super(URN, URL, position);
     }
 
 }
