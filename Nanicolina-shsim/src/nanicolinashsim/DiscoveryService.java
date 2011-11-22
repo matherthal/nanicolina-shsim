@@ -1,5 +1,8 @@
 package nanicolinashsim;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
 // #[regen=yes,id=DCE.3A1B9179-41A4-57B8-EEC9-CAB557407536]
@@ -7,11 +10,13 @@ package nanicolinashsim;
 public class DiscoveryService extends ResourceAgent {
 
     private static DiscoveryService obj = null;
-
+    private ResourceRepository base;
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.F2AA0071-09A6-769E-BE4D-7F462A5EBBD7]
     // </editor-fold> 
-    private DiscoveryService () {
+    private DiscoveryService () 
+    {
+        base = ResourceRepository.getInstance();
     }
 
     public static DiscoveryService getInstance() {
@@ -27,13 +32,30 @@ public class DiscoveryService extends ResourceAgent {
     // #[regen=yes,id=DCE.CFC20F80-102C-89C5-403B-45040F6760E1]
     // </editor-fold> 
     public ResourceAgent getResourceAgent (String URN) {
+        //Database steps
+        for (ResourceAgent r : base.resources) {
+           if (r.getURN().equals(URN))
+               return r;
+        }
         return null;
+
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.BAF7AE46-1C8D-6D93-B3F0-BE39789BAD11]
     // </editor-fold> 
-    public ResourceAgent getFromLocal (Local local) {
+    public List<ResourceAgent> getFromLocal (Local local) {
+        //Database steps
+        LocalizationService localization = LocalizationService.getInstance();
+        localization.getMap();
+        //Database step
+        
+        
+        for (ResourceAgent r : base.resources) {
+            if (r.getClass().isAssignableFrom(Entity.class))
+                Entity entity = (Entity) r;
+
+        }
         return null;
     }
 
