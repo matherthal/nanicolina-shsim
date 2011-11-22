@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;IMyRemoteService.aidl&apos; to &apos;AndEngineUbicompTest/src/br.uff.ic.ubicomp.testes.base&apos;&#x0D;&#x0A;- Original project: &apos;RemoteService&apos;&#x0D;&#x0A;- Destination element: &apos;AndEngineUbicompTest/src/br.uff.ic.ubicomp.testes.base&apos;&#x0D;&#x0A;- Original element: &apos;IMyRemoteService.aidl&apos;" description="Copy file" destination="=AndEngineUbicompTest/src&lt;br.uff.ic.ubicomp.testes.base" element1="src/com/collabera/labs/sai/IMyRemoteService.aidl" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1321283269263" units="0" version="1.0"/>
-</session>
