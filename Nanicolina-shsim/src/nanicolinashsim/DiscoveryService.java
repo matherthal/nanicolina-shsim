@@ -14,15 +14,16 @@ public class DiscoveryService extends ResourceAgent {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.F2AA0071-09A6-769E-BE4D-7F462A5EBBD7]
     // </editor-fold> 
-    private DiscoveryService () 
+    private DiscoveryService (String URN,String URL)
     {
+        super(URN,URL);
         base = ResourceRepository.getInstance();
     }
 
-    public static DiscoveryService getInstance() {
+    public static DiscoveryService getInstance(String URN, String URL) {
 
         if (obj == null) {
-            obj = new DiscoveryService();
+            obj = new DiscoveryService(URN,URL);
         }
 
         return obj;
@@ -44,25 +45,37 @@ public class DiscoveryService extends ResourceAgent {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.BAF7AE46-1C8D-6D93-B3F0-BE39789BAD11]
     // </editor-fold> 
-    public List<ResourceAgent> getFromLocal (Local local) {
+    public List<ResourceAgent> getFromLocal (String local) {
         //Database steps
-        LocalizationService localization = LocalizationService.getInstance();
-        localization.getMap();
+        Entity entity;
         //Database step
-        
-        
-        for (ResourceAgent r : base.resources) {
-            if (r.getClass().isAssignableFrom(Entity.class))
-                Entity entity = (Entity) r;
-
+        LocalizationService localization = LocalizationService.getInstance();
+        List<Local> locals = localization.getMap();
+        Local loc = null;
+        for (Local l : locals)
+        {
+            if (l.getURN().equals(local))
+                    loc = l;
         }
-        return null;
+        
+        List<ResourceAgent> result = new ArrayList<ResourceAgent>();
+        if (loc!=null)
+            for (ResourceAgent r : base.resources) {
+                if (r.getClass().isAssignableFrom(Entity.class))
+                {
+                    entity = (Entity) r;
+                    if (loc.isInner(entity.getPosition()))
+                        result.add(r);
+                }
+            }
+        return result;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.07D432AA-5CC8-7E4F-F3BD-08244AE6132B]
     // </editor-fold> 
     public ResourceAgent getCloser (ResourceAgent resource) {
+
         return null;
     }
 

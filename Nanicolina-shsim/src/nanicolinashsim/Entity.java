@@ -16,4 +16,14 @@ public class Entity extends ResourceAgent{
         super(URN,URL);
         this.position = position;
     }
+
+    public void setPosition(Position position)
+    {
+
+    }
+
+    public Position getPosition()
+    {
+        return position;
+    }
 }
