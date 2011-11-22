@@ -6,11 +6,23 @@ package nanicolinashsim;
 // </editor-fold> 
 public class InterfacePrototyping {
 
+    public InterfacePrototyping() {}
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        InterfacePrototyping intProt = new InterfacePrototyping();
+        intProt.initAmbient();
+    }
+
+    private void initAmbient() {
+
+        DiscoveryService ds = DiscoveryService.getInstance();
+
+        //tentaria encontrar referencias a
+        ds.
     }
 
 }
