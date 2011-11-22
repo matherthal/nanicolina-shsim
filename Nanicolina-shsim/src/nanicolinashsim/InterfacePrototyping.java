@@ -6,10 +6,11 @@ package nanicolinashsim;
 // </editor-fold> 
 public class InterfacePrototyping {
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.A1FDB85B-FE31-BD30-AB92-73C9E5A754F9]
-    // </editor-fold> 
-    public InterfacePrototyping () {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
     }
 
 }

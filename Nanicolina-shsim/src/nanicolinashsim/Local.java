@@ -1,16 +1,27 @@
 package nanicolinashsim;
 
 
-// <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-// #[regen=yes,id=DCE.1157F870-0CEF-D7F3-36BD-C4D702B08D00]
-// </editor-fold> 
-public class Local extends ResourceAgent {
+public class Local {
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.99B7C81D-2FBE-4452-D194-A8E75550A9DE]
-    // </editor-fold> 
-    public Local () {
-    }
+	private String name;
+
+	//espaço é retratado em termo de retangulos
+	private Position vertex0; //vértice inferior esquerda
+	private Position vertexF; //vértice superior direita
+
+	public Local (String name, Position vertex0, Position vertexF)
+	{
+		this.name = name;
+		this.vertex0= vertex0;
+		this.vertexF= vertexF;
+	}
+
+	public boolean isInner(Position position) {
+		if ((position.getX()>vertex0.getX()) && (position.getX()<vertexF.getX()))
+			return (position.getY()>vertex0.getY()) && (position.getY()<vertexF.getY());
+		return false;
+	}
 
 }
+
 
