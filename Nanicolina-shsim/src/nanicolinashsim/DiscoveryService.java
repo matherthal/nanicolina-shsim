@@ -26,7 +26,7 @@ public class DiscoveryService extends ResourceAgent {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.CFC20F80-102C-89C5-403B-45040F6760E1]
     // </editor-fold> 
-    public ResourceAgent getResourceAgent (ResourceAgent resource) {
+    public ResourceAgent getResourceAgent (String URN) {
         return null;
     }
 
