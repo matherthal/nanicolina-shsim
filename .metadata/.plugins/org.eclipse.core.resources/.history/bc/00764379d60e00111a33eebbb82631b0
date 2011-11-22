@@ -1,6 +1,0 @@
-package br.uff.ic.ubicomp.testes.base;
-
-interface IMyResourceService {
-		
-		String getName()
-}
