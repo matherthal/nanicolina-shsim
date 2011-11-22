@@ -6,10 +6,21 @@ package nanicolinashsim;
 // </editor-fold> 
 public class DiscoveryService extends ResourceAgent {
 
+    private static DiscoveryService obj = null;
+
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.F2AA0071-09A6-769E-BE4D-7F462A5EBBD7]
     // </editor-fold> 
-    public DiscoveryService () {
+    private DiscoveryService () {
+    }
+
+    public static DiscoveryService getInstance() {
+
+        if (obj == null) {
+            obj = new DiscoveryService();
+        }
+
+        return obj;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 

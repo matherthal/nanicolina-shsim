@@ -13,11 +13,21 @@ public class LocalizationService extends ResourceAgent {
     // #[regen=yes,id=DCE.F70FD774-9DFC-C76C-98C1-AACE298444B6]
     // </editor-fold> 
     private List<Local> Map;
+    private static LocalizationService obj = null;
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.807BB7DE-5705-3126-1C6C-66EEA2E9F9C9]
     // </editor-fold> 
-    public LocalizationService () {
+    private LocalizationService () {
+    }
+
+    public static LocalizationService getInstance() {
+
+        if (obj == null) {
+            obj = new LocalizationService();
+        }
+
+        return obj;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
