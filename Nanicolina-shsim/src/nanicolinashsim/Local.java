@@ -1,7 +1,7 @@
 package nanicolinashsim;
 
 
-public class Local {
+public class Local extends ResourceAgent{
 
 	private String name;
 

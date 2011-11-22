@@ -19,7 +19,9 @@ public abstract class ResourceAgent {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.1EE574A6-E1DA-B82B-D26D-13A0B02ADB52]
     // </editor-fold> 
-    public ResourceAgent () {
+    public ResourceAgent (String URN, String URL) {
+        this.URN = URN;
+        this.URL = URL;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
