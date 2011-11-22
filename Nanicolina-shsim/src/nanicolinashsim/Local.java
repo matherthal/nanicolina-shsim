@@ -9,11 +9,12 @@ public class Local extends ResourceAgent{
 	private Position vertex0; //vértice inferior esquerda
 	private Position vertexF; //vértice superior direita
 
-	public Local (String name, Position vertex0, Position vertexF)
+	public Local (String URN, String URL, Position vertex0, Position vertexF)
 	{
-		this.name = name;
-		this.vertex0= vertex0;
-		this.vertexF= vertexF;
+            super(URN, URL);
+            this.name = name;
+            this.vertex0= vertex0;
+            this.vertexF= vertexF;
 	}
 
 	public boolean isInner(Position position) {

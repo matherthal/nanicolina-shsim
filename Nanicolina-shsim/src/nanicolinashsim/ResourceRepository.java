@@ -18,6 +18,7 @@ public class ResourceRepository {
     private ResourceRepository()
     {
 
+        RegistryService r = RegistryService.getInstance("SRR", "localhost");
     }
     public static ResourceRepository getInstance()
     {

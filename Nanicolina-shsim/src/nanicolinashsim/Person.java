@@ -11,7 +11,8 @@ public class Person extends Entity {
     // </editor-fold>
 
 
-    public Person () {
+    public Person (String URN, String URL, Position position) {
+        super(URN, URL, position);
     }
 
 }
