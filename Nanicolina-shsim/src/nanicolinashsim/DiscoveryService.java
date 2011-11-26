@@ -34,10 +34,11 @@ public class DiscoveryService extends ResourceAgent {
     // </editor-fold> 
     public ResourceAgent getResourceAgent (String URN) {
         //Database steps
-        for (ResourceAgent r : base.resources) {
-           if (r.getURN().equals(URN))
-               return r;
-        }
+        if (base.resources != null)
+            for (ResourceAgent r : base.resources) {
+                if (r.getURN().equals(URN))
+                return r;
+            }
         return null;
 
     }
@@ -59,7 +60,7 @@ public class DiscoveryService extends ResourceAgent {
         }
         
         List<ResourceAgent> result = new ArrayList<ResourceAgent>();
-        if (loc!=null)
+        if (loc!=null && base.resources != null)
             for (ResourceAgent r : base.resources) {
                 if (r.getClass().isAssignableFrom(Entity.class))
                 {

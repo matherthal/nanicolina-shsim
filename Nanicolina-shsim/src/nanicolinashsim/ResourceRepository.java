@@ -5,6 +5,7 @@
 
 package nanicolinashsim;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,11 +15,10 @@ import java.util.List;
 public class ResourceRepository {
 
     private static ResourceRepository instance = null;
-
+    public List<ResourceAgent> resources;
     private ResourceRepository()
     {
-
-        RegistryService r = RegistryService.getInstance("SRR", "localhost");
+        resources = new ArrayList();
     }
     public static ResourceRepository getInstance()
     {
@@ -27,6 +27,6 @@ public class ResourceRepository {
         return instance;
     }
 
-    public List<ResourceAgent> resources;
+    
 
 }

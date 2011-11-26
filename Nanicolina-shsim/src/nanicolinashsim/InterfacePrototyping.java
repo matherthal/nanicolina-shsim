@@ -9,15 +9,15 @@ import java.util.List;
 // </editor-fold> 
 public class InterfacePrototyping {
 
-    private DiscoveryService ds;
     private ResourceRepository repo;
-
+    private DiscoveryService ds;
+    RegistryService reg;
     public InterfacePrototyping() {
         
         repo = ResourceRepository.getInstance();
-
+        repo.resources.add(DiscoveryService.getInstance("SDR", "localhost"));
+        repo.resources.add(RegistryService.getInstance("SRR", "localhost"));
         //pegar instancia do serviço de descoberta do
-        DiscoveryService ds = DiscoveryService.getInstance("SDR", "localhost");
     }
 
     /**
@@ -31,21 +31,38 @@ public class InterfacePrototyping {
 
     private void start() {
 
-        RegistryService reg = (RegistryService) ds.getResourceAgent("SRR");
-        reg.register(LocalizationService.getInstance("localization_service", "localhost"));
+        ds = (DiscoveryService) repo.resources.get(0);
+        reg = (RegistryService) ds.getResourceAgent("SRR");
+        reg.register(LocalizationService.getInstance("SLR", "localhost"));
 
         initAmbient();
 
     }
 
     private void initAmbient() {
-
-        LocalizationService ls = (LocalizationService) ds.getResourceAgent("localization_service");
+        System.out.println("Inicializando o Ambiente");
+        LocalizationService ls = (LocalizationService) ds.getResourceAgent("SLR");
 
         List<Local> locals = loadMap();
         ls.setMap(locals);
+        
 
-        System.out.println("Recursos disponiveis: \nWidgets");
+        String strLocals = "";
+        if (locals != null)
+            for (Local l: locals)
+                strLocals+= l.getURN()+"\n";
+        System.out.println("Locais da casa: \n"+
+                            strLocals);
+
+        //falta uma lista de CARs
+        String strResources = "";
+        strResources += "Fogão"+"\n";
+        strResources += "Geladeira"+"\n";
+        strResources += "TV"+"\n";
+        System.out.println("Recursos disponiveis: \n"+
+                            strResources);
+
+        
 
     }
 
