@@ -12,6 +12,9 @@ import java.util.List;
  *
  * @author Mareli
  */
+
+//Repositorio de interfaces dos recursos, contendo suas operações
+
 public class ResourceRepository {
 
     private static ResourceRepository instance = null;
