@@ -122,7 +122,7 @@ public class InterfacePrototyping {
 
         switch (type) {
             case InterfacePrototyping.FOGAO:
-                w = new Fogao(nome, "localhost", pos);
+                w = new Cooker(nome, "localhost", pos);
                 break;
             case InterfacePrototyping.GELADEIRA:
                 w = new Geladeira(nome, "localhost", pos);

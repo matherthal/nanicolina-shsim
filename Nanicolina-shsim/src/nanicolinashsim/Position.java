@@ -35,25 +35,25 @@ public class Position {
 
 	public static Position convert(String format)
 	{
-		int xBegin = 0;
-		int xEnd =0;
-		int yBegin = 0;
+            int xBegin = 0;
+            int xEnd =0;
+            int yBegin = 0;
 
 
-		int i = 0;
-		while(format.charAt(i) != ':')
-			i++;
-		i++;
-		xBegin=i;
-		while(format.charAt(i) != ',')
-			i++;
-		xEnd = i;
-		i++;
-		while(format.charAt(i) != ':')
-			i++;
-		i++;
-		yBegin=i;
-		return new Position(Float.valueOf(format.substring(xBegin, xEnd)),Float.valueOf(format.substring(yBegin)));
+            int i = 0;
+            while(format.charAt(i) != ':')
+                    i++;
+            i++;
+            xBegin=i;
+            while(format.charAt(i) != ',')
+                    i++;
+            xEnd = i;
+            i++;
+            while(format.charAt(i) != ':')
+                    i++;
+            i++;
+            yBegin=i;
+            return new Position(Float.valueOf(format.substring(xBegin, xEnd)),Float.valueOf(format.substring(yBegin)));
 	}
 }
 
