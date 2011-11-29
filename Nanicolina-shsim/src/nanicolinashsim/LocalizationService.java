@@ -44,6 +44,6 @@ public class LocalizationService extends ResourceAgent {
     public void setMap (List<Local> val) {
         this.map = val;
     }
-
+    
 }
 

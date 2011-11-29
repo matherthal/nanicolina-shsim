@@ -1,9 +1,4 @@
 package nanicolinashsim;
-
-import java.util.ArrayList;
-import java.util.List;
-
-// <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
 // #[regen=yes,id=DCE.4882BF1A-C211-E60D-5C0F-58091CEBCBA6]
 // </editor-fold> 
 public class RegistryService extends ResourceAgent {
