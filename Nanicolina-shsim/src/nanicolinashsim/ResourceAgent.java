@@ -1,10 +1,12 @@
 package nanicolinashsim;
 
+import java.util.Observable;
+
 
 // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
 // #[regen=yes,id=DCE.3B43457E-FE38-E94B-0356-9BBB1C1AB3D1]
 // </editor-fold> 
-public abstract class ResourceAgent {
+public abstract class ResourceAgent extends Observable {
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.A42CDC22-7ED9-1576-2DFB-6DBB34416F92]
