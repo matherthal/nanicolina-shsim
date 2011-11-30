@@ -3,13 +3,15 @@
  * and open the template in the editor.
  */
 
-package nanicolinashsim;
+package nanicolinashsim.widgets;
+import nanicolinashsim.Widget;
+import nanicolinashsim.Position;
 
 /**
  *
  * @author dbarreto
  */
-class Geladeira extends Widget {
+public class Geladeira extends Widget {
 
     public Geladeira(String urn, String url, Position pos) {
         super(urn, url, pos);

@@ -3,15 +3,19 @@ package nanicolinashsim;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import nanicolinashsim.aggregators.AggCookerEmergency;
+import nanicolinashsim.rules.RuleCookerEmergency;
+import nanicolinashsim.widgets.*;
 
 // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
 // #[regen=yes,id=DCE.B1C4746F-6885-C536-A50C-3BFFE9862A34]
 // </editor-fold> 
 public class InterfacePrototyping {
 
-    public static final int FOGAO = 0;
-    public static final int GELADEIRA = 1;
+    public static final int COOKER = 0;
+    public static final int REFRIGERATOR = 1;
     public static final int TV = 2;
+    public static final int BED = 3;
     private ResourceRepository repo;
     private DiscoveryService ds;
     RegistryService reg;
@@ -40,9 +44,19 @@ public class InterfacePrototyping {
         reg.register(LocalizationService.getInstance("SLR", "localhost"));
 
         initAmbient();
+        
+        /*//Start aggregators
+        String urn       = "AggCookerEmergency";
+        String url       = "localhost";
+        String urnCooker = "Fogao da cozinha";
+        String urnBed    = "Cama de solteiro";
+        createResource(urnCooker, new Position(32, 50), COOKER);
+        createResource(urnBed, new Position(114, 120), BED);
+        AggCookerEmergency agg = new AggCookerEmergency(urn, url, urnBed, urnCooker);
+        new Thread(agg).start();
+        //Start rules and associate to aggregators
+        RuleCookerEmergency rule1 = new RuleCookerEmergency(agg);*/
         listenCommand();
-
-
     }
 
     private void listenCommand() {
@@ -121,10 +135,10 @@ public class InterfacePrototyping {
         Widget w = null;
 
         switch (type) {
-            case InterfacePrototyping.FOGAO:
+            case InterfacePrototyping.COOKER:
                 w = new Cooker(nome, "localhost", pos);
                 break;
-            case InterfacePrototyping.GELADEIRA:
+            case InterfacePrototyping.REFRIGERATOR:
                 w = new Geladeira(nome, "localhost", pos);
                 break;
             case InterfacePrototyping.TV:

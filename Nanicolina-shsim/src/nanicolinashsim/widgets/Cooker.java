@@ -3,13 +3,15 @@
  * and open the template in the editor.
  */
 
-package nanicolinashsim;
+package nanicolinashsim.widgets;
+import nanicolinashsim.Widget;
+import nanicolinashsim.Position;
 
 /**
  *
  * @author dbarreto
  */
-class Cooker extends Widget {
+public class Cooker extends Widget {
 
     private boolean turnedOn = false;
 
