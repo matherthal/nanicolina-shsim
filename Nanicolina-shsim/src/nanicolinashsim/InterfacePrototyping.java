@@ -2,18 +2,26 @@ package nanicolinashsim;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Scanner;
+import nanicolinashsim.aggregators.AggCookerEmergency;
+import nanicolinashsim.rules.RuleCookerEmergency;
+import nanicolinashsim.widgets.*;
 
 // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
 // #[regen=yes,id=DCE.B1C4746F-6885-C536-A50C-3BFFE9862A34]
 // </editor-fold> 
 public class InterfacePrototyping {
 
+    public static final int COOKER = 0;
+    public static final int REFRIGERATOR = 1;
+    public static final int TV = 2;
+    public static final int BED = 3;
     private ResourceRepository repo;
     private DiscoveryService ds;
     RegistryService reg;
+
     public InterfacePrototyping() {
-        
+
         repo = ResourceRepository.getInstance();
         repo.resources.add(DiscoveryService.getInstance("SDR", "localhost"));
         repo.resources.add(RegistryService.getInstance("SRR", "localhost"));
@@ -36,7 +44,63 @@ public class InterfacePrototyping {
         reg.register(LocalizationService.getInstance("SLR", "localhost"));
 
         initAmbient();
+        
+        /*//Start aggregators
+        String urn       = "AggCookerEmergency";
+        String url       = "localhost";
+        String urnCooker = "Fogao da cozinha";
+        String urnBed    = "Cama de solteiro";
+        createResource(urnCooker, new Position(32, 50), COOKER);
+        createResource(urnBed, new Position(114, 120), BED);
+        AggCookerEmergency agg = new AggCookerEmergency(urn, url, urnBed, urnCooker);
+        new Thread(agg).start();
+        //Start rules and associate to aggregators
+        RuleCookerEmergency rule1 = new RuleCookerEmergency(agg);*/
+        listenCommand();
+    }
 
+    private void listenCommand() {
+
+        Scanner s = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Digite um comando:");
+            String command = s.nextLine();
+
+            if (command.compareToIgnoreCase("create") == 0) {
+
+                System.out.println("Digite o nome:");
+                String nome = s.nextLine();
+                System.out.println("Digite posicao x:");
+                int x = s.nextInt();
+                System.out.println("Digite posicao y:");
+                int y = s.nextInt();
+                System.out.println("Digite o tipo do recurso:");
+                int tipo = s.nextInt();
+
+                createResource(nome, new Position(x, y), tipo);
+                System.out.println("Criado o recurso");
+            } else if (command.compareTo("delete") == 0) {
+
+                System.out.println("Digite o nome do recurso:");
+                String nome = s.nextLine();
+
+                reg.unregister(ds.getResourceAgent(nome));
+                System.out.println("Recurso deletado");
+            } else if (command.compareToIgnoreCase("list") == 0) {
+
+                String str = "Nao existem recursos";
+                if (repo.resources != null) {
+
+                    str = "";
+                    for (ResourceAgent r : repo.resources) {
+                        str += r.getURN() + "\n";
+                    }
+                }
+
+                System.out.println(str);
+            }
+        }
     }
 
     private void initAmbient() {
@@ -45,25 +109,49 @@ public class InterfacePrototyping {
 
         List<Local> locals = loadMap();
         ls.setMap(locals);
-        
+
 
         String strLocals = "";
-        if (locals != null)
-            for (Local l: locals)
-                strLocals+= l.getURN()+"\n";
-        System.out.println("Locais da casa: \n"+
-                            strLocals);
+        if (locals != null) {
+            for (Local l : locals) {
+                strLocals += l.getURN() + "\n";
+            }
+        }
+        System.out.println("Locais da casa: \n"
+                + strLocals);
 
         //falta uma lista de CARs
         String strResources = "";
-        strResources += "Fogão"+"\n";
-        strResources += "Geladeira"+"\n";
-        strResources += "TV"+"\n";
-        System.out.println("Recursos disponiveis: \n"+
-                            strResources);
+        strResources += "Fogão" + "\n";
+        strResources += "Geladeira" + "\n";
+        strResources += "TV" + "\n";
+        System.out.println("Recursos disponiveis: \n"
+                + strResources);
 
-        
+    }
 
+    private void createResource(String nome, Position pos, int type) {
+
+        Widget w = null;
+
+        switch (type) {
+            case InterfacePrototyping.COOKER:
+                w = new Cooker(nome, "localhost", pos);
+                break;
+            case InterfacePrototyping.REFRIGERATOR:
+                w = new Geladeira(nome, "localhost", pos);
+                break;
+            case InterfacePrototyping.TV:
+                w = new TV(nome, "localhost", pos);
+                break;
+        }
+
+        reg.register(w);
+    }
+
+    private ResourceAgent accessResource(String urn) {
+
+        return ds.getResourceAgent(urn);
     }
 
     private List<Local> loadMap() {
@@ -82,6 +170,4 @@ public class InterfacePrototyping {
 
         return locals;
     }
-
 }
-
