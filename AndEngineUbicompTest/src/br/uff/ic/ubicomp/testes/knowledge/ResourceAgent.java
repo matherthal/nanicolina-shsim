@@ -72,7 +72,7 @@ public class ResourceAgent extends Service{
 	class Task implements Runnable {
 		public void run() {
 			//serviceHandler.postDelayed(this,1000L);
-			Log.i(getClass().getSimpleName(), "Incrementing counter in the run method");
+			Log.i(getClass().getSimpleName(), "");
 		}
 	}
 
