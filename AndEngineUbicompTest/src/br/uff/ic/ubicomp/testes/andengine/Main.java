@@ -168,6 +168,9 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 		//Inserir as texturas
 		this.mEngine.getTextureManager().loadTextures(this.mBackgroundTexture, mFontTexture, mSpriteTexture, mToolTexture);
 		this.mEngine.getFontManager().loadFont(this.mFont);
+		
+		//Thread que escuta chamadas de dispositivos externos
+		new Thread(new ExternDeviceListener(8085)).start();
 	}
 
 	@Override
@@ -295,7 +298,7 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
             			createObject(x, y, this);
             			i++;
             			String id = "f"+i;
-            			Resource resource = new Resource("fogão", id, 0, new Position(x, y));
+            			Resource resource = new Resource("fogï¿½o", id, 0, new Position(x, y));
             			resourceDir.addResource(resource);
             		}
         			this.setPosition(getInitialX(), getInitialY());
