@@ -11,9 +11,9 @@ import nanicolinashsim.Position;
  *
  * @author dbarreto
  */
-public class Geladeira extends Widget {
+public class Refrigerator extends Widget {
 
-    public Geladeira(String urn, String url, Position pos) {
+    public Refrigerator(String urn, String url, Position pos) {
         super(urn, url, pos);
     }
 

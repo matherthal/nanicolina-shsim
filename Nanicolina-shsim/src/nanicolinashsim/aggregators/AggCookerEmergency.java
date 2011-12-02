@@ -35,11 +35,12 @@ public class AggCookerEmergency extends ResourceAgent implements Runnable, Aggre
         while (true) {
             //Test conditions:
             Bed bed = (Bed) ds.getResourceAgent(urnBed);
+            /*
             if (bed.getUsed() != true)
-                return;
-            Cooker cooker = (Cooker) ds.getResourceAgent(urnCooker);
-            if (cooker.getTurnedOn() != true)
-                return;
+                return;*/
+            //Cooker cooker = (Cooker) ds.getResourceAgent(urnCooker);
+            /*if (cooker.getTurnedOn() != true)
+                return;*/
 
             try {
                 Thread.sleep(1000);

@@ -1,10 +1,14 @@
 package nanicolinashsim;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import nanicolinashsim.aggregators.AggCookerEmergency;
 import nanicolinashsim.rules.RuleCookerEmergency;
+import nanicolinashsim.base.DB;
 import nanicolinashsim.widgets.*;
 
 // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
@@ -45,17 +49,17 @@ public class InterfacePrototyping {
 
         initAmbient();
         
-        /*//Start aggregators
-        String urn       = "AggCookerEmergency";
+        //Start aggregators
+        /*String urn       = "AggCookerEmergency";
         String url       = "localhost";
-        String urnCooker = "Fogao da cozinha";
-        String urnBed    = "Cama de solteiro";
-        createResource(urnCooker, new Position(32, 50), COOKER);
-        createResource(urnBed, new Position(114, 120), BED);
+        String urnCooker = "Fogao da cozinha1";
+        String urnBed    = "Cama de solteiro1";
+        createResource(urnCooker, new Position(0.0f, 0.0f), InterfacePrototyping.COOKER);
+        createResource(urnBed, new Position(0.0f, 0.0f), InterfacePrototyping.BED);
         AggCookerEmergency agg = new AggCookerEmergency(urn, url, urnBed, urnCooker);
-        new Thread(agg).start();
+        new Thread(agg).start();*/
         //Start rules and associate to aggregators
-        RuleCookerEmergency rule1 = new RuleCookerEmergency(agg);*/
+        //RuleCookerEmergency rule1 = new RuleCookerEmergency(agg);
         listenCommand();
     }
 
@@ -68,15 +72,19 @@ public class InterfacePrototyping {
             String command = s.nextLine();
 
             if (command.compareToIgnoreCase("create") == 0) {
-
+                System.out.println("Escolha o tipo do recurso pelo número:");
+                System.out.println(COOKER + " - Fogão");
+                System.out.println(REFRIGERATOR + " - Geladeira");
+                System.out.println(TV + " - TV");
+                System.out.println(BED + " - Cama");
+                int tipo = s.nextInt();
+                s.nextLine();
                 System.out.println("Digite o nome:");
                 String nome = s.nextLine();
                 System.out.println("Digite posicao x:");
                 int x = s.nextInt();
                 System.out.println("Digite posicao y:");
                 int y = s.nextInt();
-                System.out.println("Digite o tipo do recurso:");
-                int tipo = s.nextInt();
 
                 createResource(nome, new Position(x, y), tipo);
                 System.out.println("Criado o recurso");
@@ -110,7 +118,6 @@ public class InterfacePrototyping {
         List<Local> locals = loadMap();
         ls.setMap(locals);
 
-
         String strLocals = "";
         if (locals != null) {
             for (Local l : locals) {
@@ -125,6 +132,7 @@ public class InterfacePrototyping {
         strResources += "Fogão" + "\n";
         strResources += "Geladeira" + "\n";
         strResources += "TV" + "\n";
+        strResources += "Cama" + "\n";
         System.out.println("Recursos disponiveis: \n"
                 + strResources);
 
@@ -139,13 +147,26 @@ public class InterfacePrototyping {
                 w = new Cooker(nome, "localhost", pos);
                 break;
             case InterfacePrototyping.REFRIGERATOR:
-                w = new Geladeira(nome, "localhost", pos);
+                w = new Refrigerator(nome, "localhost", pos);
                 break;
             case InterfacePrototyping.TV:
                 w = new TV(nome, "localhost", pos);
                 break;
+            case InterfacePrototyping.BED:
+                w = new Bed(nome, "localhost", pos);
+                break;
         }
 
+        DB db = DB.getInstance();
+        try {
+            db.persistRA(w, type);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(InterfacePrototyping.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Erro ao carregar bibliotecas da base de dados");
+        } catch (SQLException ex) {
+            Logger.getLogger(InterfacePrototyping.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Erro de banco de dados");
+        }
         reg.register(w);
     }
 
