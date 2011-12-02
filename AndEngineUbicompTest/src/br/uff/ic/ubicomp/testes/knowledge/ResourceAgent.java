@@ -1,79 +1,58 @@
 package br.uff.ic.ubicomp.testes.knowledge;
 
-
-import br.uff.ic.ubicomp.testes.andengine.Main;
-import br.uff.ic.ubicomp.testes.base.Resource;
-import br.uff.ic.ubicomp.testes.base.Position;
-import br.uff.ic.ubicomp.testes.knowledge.EntityAgent.Task;
-
-import android.app.Service;
-import android.content.Intent;
-import android.os.Handler;
-import android.os.IBinder;
-import android.os.RemoteException;
-import android.util.Log;
-import android.widget.Toast;
+import java.util.Observable;
 
 
-public class ResourceAgent extends Service{
-	
-	
-	private Task myTask = new Task();
-	
+// <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
+// #[regen=yes,id=DCE.3B43457E-FE38-E94B-0356-9BBB1C1AB3D1]
+// </editor-fold> 
+public abstract class ResourceAgent extends Observable {
 
-	@Override
-	public IBinder onBind(Intent arg0) {
-		Log.d(getClass().getSimpleName(), "onBind()");
-		Toast.makeText(this, "onBind()", Toast.LENGTH_LONG).show();
-		return new ResourceImpl();
-	}
+    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
+    // #[regen=yes,id=DCE.A42CDC22-7ED9-1576-2DFB-6DBB34416F92]
+    // </editor-fold> 
+    private String URN;
 
-	private class ResourceImpl extends IMyResourceService.Stub {
-		private Resource resource;
-		
-		public void createResource(String name, String id, int onOff, float x, float y)
-		{
-			resource = new Resource(name,id,onOff, new Position(x,y));
-		}
-		
-		public String getResource()
-		{
-			return resource.toString();
-		}
-		
-	};
-	
-	private Handler serviceHandler;
-	
+    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
+    // #[regen=yes,id=DCE.B72006E3-E487-8381-6134-93FE97F32C8A]
+    // </editor-fold> 
+    private String URL;
 
-	
-	@Override
-	public void onCreate() {
-		super.onCreate();
-		Log.d(getClass().getSimpleName(),"onCreate()");
-	}
-	
-	@Override
-	public void onDestroy() {
-		super.onDestroy();
-		serviceHandler.removeCallbacks(myTask);
-		serviceHandler = null;
-		Log.d(getClass().getSimpleName(),"onDestroy()");
-	}
-	
-	@Override
-	public void onStart(Intent intent, int startId) {
-		super.onStart(intent, startId);
-		serviceHandler = new Handler();
-		serviceHandler.postDelayed(myTask, 1000L);
-		Log.d(getClass().getSimpleName(), "onStart()");
-	}
-	
-	class Task implements Runnable {
-		public void run() {
-			//serviceHandler.postDelayed(this,1000L);
-			Log.i(getClass().getSimpleName(), "");
-		}
-	}
+    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
+    // #[regen=yes,id=DCE.1EE574A6-E1DA-B82B-D26D-13A0B02ADB52]
+    // </editor-fold> 
+    public ResourceAgent (String URN, String URL) {
+        this.URN = URN;
+        this.URL = URL;
+    }
+
+    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
+    // #[regen=yes,regenBody=yes,id=DCE.3EC980A0-81B9-1DDF-1AE5-0D9124BD87EE]
+    // </editor-fold> 
+    public String getURL () {
+        return URL;
+    }
+
+    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
+    // #[regen=yes,regenBody=yes,id=DCE.506FB533-4530-684B-BC31-91BDE8EBA492]
+    // </editor-fold> 
+    public void setURL (String val) {
+        this.URL = val;
+    }
+
+    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
+    // #[regen=yes,regenBody=yes,id=DCE.B2D81DB0-2537-E388-D8C8-30F88146D4B8]
+    // </editor-fold> 
+    public String getURN () {
+        return URN;
+    }
+
+    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
+    // #[regen=yes,regenBody=yes,id=DCE.85FE0B6D-7917-87D5-BB73-53A7C335A2EC]
+    // </editor-fold> 
+    public void setURN (String val) {
+        this.URN = val;
+    }
 
 }
+
