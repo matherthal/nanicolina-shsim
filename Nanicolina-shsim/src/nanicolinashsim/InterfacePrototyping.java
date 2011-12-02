@@ -8,18 +8,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import nanicolinashsim.aggregators.AggCookerEmergency;
 import nanicolinashsim.rules.RuleCookerEmergency;
+import nanicolinashsim.utils.ResourceTypes;
 import nanicolinashsim.base.DB;
 import nanicolinashsim.widgets.*;
 
 // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
 // #[regen=yes,id=DCE.B1C4746F-6885-C536-A50C-3BFFE9862A34]
 // </editor-fold> 
-public class InterfacePrototyping {
-
-    public static final int COOKER = 0;
-    public static final int REFRIGERATOR = 1;
-    public static final int TV = 2;
-    public static final int BED = 3;
+public class InterfacePrototyping {    
     private ResourceRepository repo;
     private DiscoveryService ds;
     RegistryService reg;
@@ -73,10 +69,10 @@ public class InterfacePrototyping {
 
             if (command.compareToIgnoreCase("create") == 0) {
                 System.out.println("Escolha o tipo do recurso pelo número:");
-                System.out.println(COOKER + " - Fogão");
-                System.out.println(REFRIGERATOR + " - Geladeira");
-                System.out.println(TV + " - TV");
-                System.out.println(BED + " - Cama");
+                System.out.println(ResourceTypes.COOKER + " - Fogão");
+                System.out.println(ResourceTypes.REFRIGERATOR + " - Geladeira");
+                System.out.println(ResourceTypes.TV + " - TV");
+                System.out.println(ResourceTypes.BED + " - Cama");
                 int tipo = s.nextInt();
                 s.nextLine();
                 System.out.println("Digite o nome:");
@@ -136,6 +132,22 @@ public class InterfacePrototyping {
         System.out.println("Recursos disponiveis: \n"
                 + strResources);
 
+        //Recovering the Widgets from the database
+        DB db = DB.getInstance();
+        try {
+            //List of widgets returned
+            List<Widget> widgets = db.getAllRA();
+            System.out.println("Lista de ARs carregados da Base de Dados:");
+            int i = 0;
+            for (Widget w : widgets) {
+                System.out.println("\n" + ++i + ".\nURN:" + w.getURN() + "\nURL:" + w.getURL() + "\nPos: " + w.getPosition());
+            }
+
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(InterfacePrototyping.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(InterfacePrototyping.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     private void createResource(String nome, Position pos, int type) {
@@ -143,16 +155,16 @@ public class InterfacePrototyping {
         Widget w = null;
 
         switch (type) {
-            case InterfacePrototyping.COOKER:
+            case ResourceTypes.COOKER:
                 w = new Cooker(nome, "localhost", pos);
                 break;
-            case InterfacePrototyping.REFRIGERATOR:
+            case ResourceTypes.REFRIGERATOR:
                 w = new Refrigerator(nome, "localhost", pos);
                 break;
-            case InterfacePrototyping.TV:
+            case ResourceTypes.TV:
                 w = new TV(nome, "localhost", pos);
                 break;
-            case InterfacePrototyping.BED:
+            case ResourceTypes.BED:
                 w = new Bed(nome, "localhost", pos);
                 break;
         }

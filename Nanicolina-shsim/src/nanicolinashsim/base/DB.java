@@ -6,7 +6,16 @@
 package nanicolinashsim.base;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import nanicolinashsim.ResourceAgent;
+import nanicolinashsim.Widget;
+import nanicolinashsim.utils.ResourceTypes;
+import nanicolinashsim.widgets.Bed;
+import nanicolinashsim.widgets.Cooker;
+import nanicolinashsim.widgets.Refrigerator;
+import nanicolinashsim.widgets.TV;
+import nanicolinashsim.Position;
 
 public class DB {
     private static DB obj = null;
@@ -52,16 +61,69 @@ public class DB {
         //conn.setAutoCommit(true);
         //conn.commit();
 
-        Statement stat = conn.createStatement();
+        /*Statement stat = conn.createStatement();
         ResultSet rs = stat.executeQuery("SELECT * FROM " + tableName + ";");
         System.out.println("DEBUG: SELECT * FROM " + tableName);
         while (rs.next()) {
             System.out.println("  Agente de Recurso\n  URN: " + rs.getString("URN"));
             System.out.println("  Type: " + rs.getString("TYPE"));
         }
+        System.out.println("END");
+        rs.close();
+        */
+        conn.commit();
+        conn.close();        
+    }
+
+    public static List<Widget> getAllRA() throws ClassNotFoundException, SQLException {
+
+        Class.forName("org.sqlite.JDBC");
+        Connection conn = DriverManager.getConnection("jdbc:sqlite:nshsim.db");
+               
+        String tableName = "registered_ra";
+        
+        //These options to disable and enable setAutoCommit are used to make transactions faster
+        conn.setAutoCommit(false);
+
+        List<Widget> list = new ArrayList<Widget>(); //Widgets to be returned by this method
+        Statement stat = conn.createStatement();
+        ResultSet rs = stat.executeQuery("SELECT * FROM " + tableName + ";");
+        System.out.println("DEBUG: SELECT * FROM " + tableName);
+        //Iterating over the query result to get the RA (Widgets)
+        while (rs.next()) {
+            System.out.println("  Agente de Recurso\n  URN: " + rs.getString("URN"));
+            System.out.println("  Type: " + rs.getString("TYPE"));            
+
+            //Auxiliary vars
+            String urn = rs.getString("URN");
+            String url = "localhost"; //TODO: chose what to do concerning the URL
+            Position pos = null;
+            Widget w;
+            //Specialize the Widget if the database contains the type associated
+            switch (rs.getInt("TYPE")) {
+                case ResourceTypes.COOKER:
+                    w = new Cooker(urn, url, pos);
+                    break;
+                case ResourceTypes.REFRIGERATOR:
+                    w = new Refrigerator(urn, url, pos);
+                    break;
+                case ResourceTypes.TV:
+                    w = new TV(urn, url, pos);
+                    break;
+                case ResourceTypes.BED:
+                    w = new Bed(urn, url, pos);
+                    break;
+                default:
+                    w = new Widget(rs.getString("URN"), url, pos);
+                    break;
+            }
+            list.add(w);
+        }
+        System.out.println("END");
         conn.commit();
         rs.close();
         conn.close();
-        System.out.println("END");
+
+        return list;
     }
 }
