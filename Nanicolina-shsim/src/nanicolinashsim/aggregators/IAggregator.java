@@ -9,6 +9,6 @@ package nanicolinashsim.aggregators;
  *
  * @author matheus
  */
-public class Aggregator implements IAggregator {
-    
+public interface IAggregator {
+
 }
