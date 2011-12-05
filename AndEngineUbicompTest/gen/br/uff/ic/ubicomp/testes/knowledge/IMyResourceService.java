@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /home/dbarreto/projetos_mercurial/nanicolina-shsim/AndEngineUbicompTest/src/br/uff/ic/ubicomp/testes/knowledge/IMyResourceService.aidl
+ * Original file: C:\\Users\\Mareli\\workspace\\nanicolina-shsim\\AndEngineUbicompTest\\src\\br\\uff\\ic\\ubicomp\\testes\\knowledge\\IMyResourceService.aidl
  */
 package br.uff.ic.ubicomp.testes.knowledge;
 public interface IMyResourceService extends android.os.IInterface

@@ -1,49 +1,28 @@
 package br.uff.tempo.naniclina.resources;
 
-public class Local {
-	
-	private int x;
-	private int y;
-	
-	public Local(int x, int y)
+
+public class Local extends ResourceAgent{
+
+	private String name;
+
+	//espaço é retratado em termo de retangulos
+	private Position vertex0; //vértice inferior esquerda
+	private Position vertexF; //vértice superior direita
+
+	public Local (String URN, String URL, Position vertex0, Position vertexF)
 	{
-		this.x = x;
-		this.y = y;		
-	}
-	
-	public int getX() {
-		return x;
+            super(URN, URL);
+            this.name = name;
+            this.vertex0= vertex0;
+            this.vertexF= vertexF;
 	}
 
-	public int getY() {
-		return y;
-	}
-	
-	public String toString()
-	{
-		return "x: "+x +", y: "+ y;
+	public boolean isInner(Position position) {
+		if ((position.getX()>vertex0.getX()) && (position.getX()<vertexF.getX()))
+			return (position.getY()>vertex0.getY()) && (position.getY()<vertexF.getY());
+		return false;
 	}
 
-	public static Local convert(String format)
-	{
-		int xBegin = 0;
-		int xEnd =0;
-		int yBegin = 0;
-
-		
-		int i = 0;
-		while(format.charAt(i) != ':')
-			i++;
-		i++;
-		xBegin=i;
-		while(format.charAt(i) != ',')
-			i++;
-		xEnd = i;
-		i++;
-		while(format.charAt(i) != ':')
-			i++;
-		i++;
-		yBegin=i;
-		return new Local(Integer.valueOf(format.substring(xBegin, xEnd)),Integer.valueOf(format.substring(yBegin)));
-	}
 }
+
+

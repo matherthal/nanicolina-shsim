@@ -2,13 +2,20 @@ package br.uff.tempo.naniclina.resourcemanager;
 
 import java.util.ArrayList;
 
+import com.google.gson.Gson;
 
 
-import br.uff.tempo.naniclina.resources.Device;
+
+import br.uff.tempo.naniclina.resources.Bed;
+import br.uff.tempo.naniclina.resources.Cooker;
+
 import br.uff.tempo.naniclina.resources.Local;
-import br.uff.tempo.naniclina.resources.DangerDevice;
-import br.uff.tempo.naniclina.resources.VisualDevice;
-import br.uff.tempo.naniclina.resources.PresenceSensor;
+
+import br.uff.tempo.naniclina.resources.Position;
+import br.uff.tempo.naniclina.resources.Refrigerator;
+import br.uff.tempo.naniclina.resources.TV;
+
+import br.uff.tempo.naniclina.resources.Widget;
 
 import android.app.Activity;
 import android.content.Context;
@@ -34,14 +41,15 @@ public class ResourceManagerActivity extends Activity {
 	
 	ArrayList<String> arraySpinnerReg;
 	
-	ArrayList<Device> disponibleRes;
-	ArrayList<Device> registeredRes;
+	ArrayList<Widget> disponibleRes;
+	ArrayList<Widget> registeredRes;
+	
+	SocketService socket;
 
-	Device stove;
-	DangerDevice fireDetector;
-	VisualDevice television;
-	VisualDevice tablet;
-	PresenceSensor psensor;
+	Cooker cooker;
+	Bed bed;
+	TV television;
+	Refrigerator refrigerator;
 	String[] arraySpinner;
 
 	
@@ -52,27 +60,24 @@ public class ResourceManagerActivity extends Activity {
         spinner = (Spinner) findViewById(R.id.spinner1);
         spinnerReg = (Spinner) findViewById(R.id.spinner2);
         
-        disponibleRes = new ArrayList<Device>();
-    	registeredRes = new ArrayList<Device>();
+        disponibleRes = new ArrayList<Widget>();
+    	registeredRes = new ArrayList<Widget>();
         
-        arraySpinner=new String[5];
+        arraySpinner=new String[4];
         arraySpinnerReg=new ArrayList<String>();
-        arraySpinner[0]="Fogão 1";
-        stove = new Device("Stove",arraySpinner[0],0, new Local(0,0) );
-        disponibleRes.add(stove);
-        arraySpinner[1]="Detector de Incêndio 1";
-        fireDetector = new DangerDevice ("fireDetector", arraySpinner[1], 0, new Local(0,0)); 
-        disponibleRes.add(fireDetector);
-        arraySpinner[2]="Televisão 1";
-        television = new VisualDevice("television", arraySpinner[2], 0, new Local(0,0));
+        arraySpinner[0]="cooker1";
+        cooker = new Cooker(arraySpinner[0],"localhost", new Position(0,0));
+        disponibleRes.add(cooker);
+        arraySpinner[1]="bed1";
+        bed = new Bed(arraySpinner[1], "localhost", new Position(0,0)); 
+        disponibleRes.add(bed);
+        arraySpinner[2]="tv1";
+        television = new TV(arraySpinner[2], "localhost", new Position(0,0));
         disponibleRes.add(television);
-        arraySpinner[3]="Tablet 1";
-        tablet = new VisualDevice("tablet", arraySpinner[3], 0, new Local(0,0));
-        disponibleRes.add(tablet);
-        arraySpinner[4]="Sensor de Presença";
-        psensor = new PresenceSensor("presenceSensor", arraySpinner[4], 0, new Local(0,0));
-        disponibleRes.add(psensor);
-        
+        arraySpinner[3]="refrigerator1";
+        refrigerator = new Refrigerator(arraySpinner[3], "localhost", new Position(0,0));
+        disponibleRes.add(refrigerator);
+                
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
         android.R.layout.simple_spinner_item, arraySpinner);
         spinner.setAdapter(adapter);
@@ -86,7 +91,6 @@ public class ResourceManagerActivity extends Activity {
         mEditX = (EditText) findViewById(R.id.editText1);
         mEditY = (EditText) findViewById(R.id.editText2);
         mEditDevice = (EditText) findViewById(R.id.editText3);
-        resource = new ResourceListener(this,10006); 
         //resource.start();
         /*ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this, R.array.planets_array, android.R.layout.simple_spinner_item);
@@ -101,9 +105,11 @@ public class ResourceManagerActivity extends Activity {
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(ResourceManagerActivity.this,
                     android.R.layout.simple_spinner_item, arraySpinnerReg);
             spinnerReg.setAdapter(adapter);
-            Device dev = disponibleRes.get(spinner.getSelectedItemPosition());
-            dev.setLocalization(new Local(Integer.valueOf(mEditX.getText().toString()),Integer.valueOf(mEditY.getText().toString())));
+            Widget dev = disponibleRes.get(spinner.getSelectedItemPosition());
+            dev.setPosition(new Position(Float.valueOf(mEditX.getText().toString()),Float.valueOf(mEditY.getText().toString())));
             registeredRes.add(dev);
+            socket = new SocketService(mEditDevice.getText().toString(),8085);
+            socket.sendStatus((new Gson()).toJson(dev));
         }
     };
     
@@ -114,10 +120,10 @@ public class ResourceManagerActivity extends Activity {
         }
     };
     
-    private Device searchDevice(String id)
+    private Widget searchDevice(String id)
     {
     	int i = 0;
-    	for (; i< registeredRes.size() && !id.equals(registeredRes.get(i).getId()); i++)
+    	for (; i< registeredRes.size() && !id.equals(registeredRes.get(i).getURN()); i++)
     	{}
     	return registeredRes.get(i);
     }
