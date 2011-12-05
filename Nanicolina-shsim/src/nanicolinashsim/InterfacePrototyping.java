@@ -46,17 +46,30 @@ public class InterfacePrototyping {
         initAmbient();
         
         //Start aggregators
-        /*String urn       = "AggCookerEmergency";
+        String urn       = "AggCookerEmergency";
         String url       = "localhost";
-        String urnCooker = "Fogao da cozinha1";
-        String urnBed    = "Cama de solteiro1";
-        createResource(urnCooker, new Position(0.0f, 0.0f), InterfacePrototyping.COOKER);
-        createResource(urnBed, new Position(0.0f, 0.0f), InterfacePrototyping.BED);
+        String urnCooker = "Fogao da cozinha";
+        String urnBed    = "Cama de Matheus";
+        createResource(urnCooker, new Position(0.0f, 0.0f), ResourceTypes.COOKER);
+        createResource(urnBed, new Position(0.0f, 0.0f), ResourceTypes.BED);
         AggCookerEmergency agg = new AggCookerEmergency(urn, url, urnBed, urnCooker);
-        new Thread(agg).start();*/
+        /*new Thread(agg).start();*/
         //Start rules and associate to aggregators
         //RuleCookerEmergency rule1 = new RuleCookerEmergency(agg);
+        
         listenCommand();
+        try {
+            System.out.println("DEBUG Fogao ligado");
+            Cooker cooker = (Cooker) ds.getResourceAgent(urnCooker);
+            cooker.setTurnedOn(true);
+            System.out.println("Esperando 10seg");
+            Thread.sleep(10000);
+            System.out.println("Esperou\n");
+            Bed bed = (Bed) ds.getResourceAgent(urnBed);
+            bed.setUsed(true);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(InterfacePrototyping.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     private void listenCommand() {
@@ -137,10 +150,11 @@ public class InterfacePrototyping {
         try {
             //List of widgets returned
             List<Widget> widgets = db.getAllRA();
-            System.out.println("Lista de ARs carregados da Base de Dados:");
+            System.out.println("Registrando ARs carregados da Base de Dados:");
             int i = 0;
             for (Widget w : widgets) {
                 System.out.println("\n" + ++i + ".\nURN:" + w.getURN() + "\nURL:" + w.getURL() + "\nPos: " + w.getPosition());
+                reg.register(w);
             }
 
         } catch (ClassNotFoundException ex) {
