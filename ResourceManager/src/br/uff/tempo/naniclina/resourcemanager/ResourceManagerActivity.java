@@ -2,23 +2,9 @@ package br.uff.tempo.naniclina.resourcemanager;
 
 import java.util.ArrayList;
 
-import com.google.gson.Gson;
-
-
-
-import br.uff.tempo.naniclina.resources.Bed;
-import br.uff.tempo.naniclina.resources.Cooker;
-
-import br.uff.tempo.naniclina.resources.Local;
-
-import br.uff.tempo.naniclina.resources.Position;
-import br.uff.tempo.naniclina.resources.Refrigerator;
-import br.uff.tempo.naniclina.resources.TV;
-
-import br.uff.tempo.naniclina.resources.Widget;
-
 import android.app.Activity;
 import android.content.Context;
+
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -26,6 +12,16 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
+import br.uff.tempo.naniclina.knowledge.Bed;
+import br.uff.tempo.naniclina.knowledge.Cooker;
+import br.uff.tempo.naniclina.knowledge.Position;
+import br.uff.tempo.naniclina.knowledge.Refrigerator;
+import br.uff.tempo.naniclina.knowledge.TV;
+import br.uff.tempo.naniclina.knowledge.Widget;
+
+import com.google.gson.Gson;
+
 
 public class ResourceManagerActivity extends Activity {
     /** Called when the activity is first created. */
@@ -109,6 +105,7 @@ public class ResourceManagerActivity extends Activity {
             dev.setPosition(new Position(Float.valueOf(mEditX.getText().toString()),Float.valueOf(mEditY.getText().toString())));
             registeredRes.add(dev);
             socket = new SocketService(mEditDevice.getText().toString(),8085);
+            Toast.makeText(ResourceManagerActivity.this, "Mensagem enviada", Toast.LENGTH_LONG).show();
             socket.sendStatus((new Gson()).toJson(dev));
         }
     };
