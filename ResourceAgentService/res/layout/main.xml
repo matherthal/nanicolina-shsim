@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <Button android:id="@+id/button1" android:text="@string/createResBt" android:layout_height="wrap_content" android:layout_width="match_parent"></Button>
+<TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:id="@+id/textView1" android:text="@string/listDispResTitle"></TextView>
+<Spinner android:id="@+id/spinner1" android:layout_height="wrap_content" android:layout_width="match_parent"></Spinner>
+<TextView android:layout_height="wrap_content" android:text="@string/xLoc" android:layout_width="wrap_content" android:id="@+id/textView4" ></TextView>
+<TextView android:layout_height="wrap_content" android:text="@string/yLoc" android:layout_width="wrap_content" android:id="@+id/textView5" ></TextView>
+<EditText android:inputType="number" android:layout_width="148dp" android:layout_height="wrap_content" android:id="@+id/editText1"></EditText>
+<EditText  android:id="@+id/editText2" android:layout_height="wrap_content" android:inputType="number" android:layout_width="148dp"></EditText>
+<Button android:id="@+id/button2" android:layout_height="wrap_content" android:text="@string/regRes" android:layout_width="match_parent"></Button>
+<Spinner android:id="@+id/spinner2" android:layout_height="wrap_content" android:layout_width="match_parent"></Spinner>
+<EditText android:layout_height="wrap_content" android:id="@+id/editText3" android:layout_width="716dp">
+    <requestFocus></requestFocus>
+</EditText>
+</LinearLayout>
