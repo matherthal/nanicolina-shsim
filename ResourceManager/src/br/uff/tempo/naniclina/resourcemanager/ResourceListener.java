@@ -1,10 +1,9 @@
 package br.uff.tempo.naniclina.resourcemanager;
 
-import br.uff.tempo.naniclina.resources.Widget;
+import android.widget.ArrayAdapter;
+import br.uff.tempo.naniclina.knowledge.Widget;
 
 import com.google.gson.Gson;
-
-import android.widget.ArrayAdapter;
 
 
 public class ResourceListener extends Thread{

@@ -244,6 +244,8 @@ public class Main extends BaseGameActivity implements Observer, IOnSceneTouchLis
 	
 	public void createObject(final float x, final float y, Sprite sprite) {
 		
+		Log.d(TAG, "Create object");
+		
 		Sprite obj = new Sprite(x - sprite.getWidth() / 2, y - sprite.getHeight() / 2, sprite.getTextureRegion()) {
             @Override
             public boolean onAreaTouched(final TouchEvent pSceneTouchEvent, final float pTouchAreaLocalX, final float pTouchAreaLocalY) {
@@ -256,6 +258,7 @@ public class Main extends BaseGameActivity implements Observer, IOnSceneTouchLis
 		
 		this.mScene.getChild(LAYER_OBJETOS).attachChild(obj);
 		this.mScene.registerTouchArea(obj);
+		Log.d(TAG, "Create object - fim");
 	}
 	
 	protected String locate(float x, float y) {
@@ -399,11 +402,13 @@ public class Main extends BaseGameActivity implements Observer, IOnSceneTouchLis
     }*/
 
 	@Override
-	public void update(Observable arg0, Object arg1) {
+	public void update(Observable o, Object res) {
 		// TODO Auto-generated method stub
-		String str = (String) arg1;
-		Widget widget = (new Gson()).fromJson(str, Widget.class);
-		createObject(widget.getPosition().getX(),widget.getPosition().getY(),new Sprite(260, 10, this.mFogaoTextureRegionItem));
+		
+		Log.d(TAG, "update!");
+		Widget widget = (Widget) res;
+		
+		createObject(widget.getPosition().getX(), widget.getPosition().getY(), new Sprite(260, 10, this.mFogaoTextureRegionItem));
 		RegistryService.getInstance("SRR", "localhost").register(widget);
 	}
   
