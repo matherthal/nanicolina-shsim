@@ -4,6 +4,9 @@ package br.uff.ic.ubicomp.testes.andengine;
  * @author David Barreto
  */
 
+import java.util.Observable;
+import java.util.Observer;
+
 import org.anddev.andengine.engine.Engine;
 import org.anddev.andengine.engine.camera.ZoomCamera;
 import org.anddev.andengine.engine.options.EngineOptions;
@@ -12,7 +15,6 @@ import org.anddev.andengine.engine.options.resolutionpolicy.RatioResolutionPolic
 import org.anddev.andengine.entity.Entity;
 import org.anddev.andengine.entity.scene.Scene;
 import org.anddev.andengine.entity.scene.Scene.IOnSceneTouchListener;
-import org.anddev.andengine.entity.scene.background.ColorBackground;
 import org.anddev.andengine.entity.sprite.Sprite;
 import org.anddev.andengine.entity.text.ChangeableText;
 import org.anddev.andengine.input.touch.TouchEvent;
@@ -25,25 +27,18 @@ import org.anddev.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlasTextur
 import org.anddev.andengine.opengl.texture.region.TextureRegion;
 import org.anddev.andengine.ui.activity.BaseGameActivity;
 
-import br.uff.ic.ubicomp.testes.base.Position;
-import br.uff.ic.ubicomp.testes.base.Resource;
-import br.uff.ic.ubicomp.testes.knowledge.IMyResourceService;
-import br.uff.ic.ubicomp.testes.knowledge.ResourceDirectory;
+import com.google.gson.Gson;
 
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.content.ServiceConnection;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.os.IBinder;
-import android.os.RemoteException;
 import android.util.Log;
 import android.view.Display;
-import android.widget.TextView;
 import android.widget.Toast;
+import br.uff.ic.ubicomp.testes.knowledge.Position;
+import br.uff.ic.ubicomp.testes.knowledge.RegistryService;
+import br.uff.ic.ubicomp.testes.knowledge.Widget;
 
-public class Main extends BaseGameActivity implements IOnSceneTouchListener, IScrollDetectorListener {
+public class Main extends BaseGameActivity implements Observer, IOnSceneTouchListener, IScrollDetectorListener {
 // ===========================================================
 // Constants			
 // ===========================================================
@@ -88,13 +83,12 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 	//scene
 	private Scene mScene;
 
-	private EventsInterpreter eventsInterpreter;
+	//private EventsInterpreter eventsInterpreter;
 // ===========================================================
 // Constructors
 // ===========================================================
 	
-	public IMyResourceService remoteService;
-	private ResourceDirectory resourceDir = new ResourceDirectory(this);
+
 	private int i =0 ;
 	
 
@@ -170,7 +164,7 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 		this.mEngine.getFontManager().loadFont(this.mFont);
 		
 		//Thread que escuta chamadas de dispositivos externos
-		new Thread(new ExternDeviceListener(8085)).start();
+		new Thread(new ExternDeviceListener(this,8085)).start();
 	}
 
 	@Override
@@ -210,9 +204,9 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
                 this.setPosition(x - width / 2, y - height / 2);
                     
                 //text.setText("Calling interpreter1");
-                eventsInterpreter = EventsInterpreter.getInstance();
+                //eventsInterpreter = EventsInterpreter.getInstance();
                 String action = "";
-                action = eventsInterpreter.onLocationChanged(onde);
+                //action = eventsInterpreter.onLocationChanged(onde);
                 text.setText(action);
                 
                 return true;
@@ -296,12 +290,10 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
         		if (pSceneTouchEvent.isActionUp()) {
         			if (x < 250) {
             			createObject(x, y, this);
-            			i++;
-            			String id = "f"+i;
-            			Resource resource = new Resource("fog�o", id, 0, new Position(x, y));
-            			resourceDir.addResource(resource);
+            			Widget resource = new Widget("cooker1", "localhost", new Position(x, y));
+            			RegistryService.getInstance("SRR", "localhost").register(resource);
             		}
-        			this.setPosition(getInitialX(), getInitialY());
+        			//this.setPosition(getInitialX(), getInitialY());
         		}
        		
         		Log.d(TAG, "init X = " + getInitialX() + ", init Y = " + getInitialY());
@@ -405,6 +397,15 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
       //TextView t = (TextView)findViewById(R.id.serviceStatus);
   	  //t.setText( statusText );	
     }*/
+
+	@Override
+	public void update(Observable arg0, Object arg1) {
+		// TODO Auto-generated method stub
+		String str = (String) arg1;
+		Widget widget = (new Gson()).fromJson(str, Widget.class);
+		createObject(widget.getPosition().getX(),widget.getPosition().getY(),new Sprite(260, 10, this.mFogaoTextureRegionItem));
+		RegistryService.getInstance("SRR", "localhost").register(widget);
+	}
   
 	/*public class RemoteServiceConnection implements ServiceConnection {
 		  

@@ -1,7 +1,11 @@
 package br.uff.tempo.naniclina.resourcemanager;
 
+import br.uff.tempo.naniclina.resources.Widget;
+
+import com.google.gson.Gson;
+
 import android.widget.ArrayAdapter;
-import br.uff.tempo.naniclina.resources.Device;
+
 
 public class ResourceListener extends Thread{
 	
@@ -28,7 +32,7 @@ public class ResourceListener extends Thread{
 			String strDevice = server.receiveStatus();
 			if (!strDevice.equals("Registrado"))
 			{
-				Device device = server.getDevice(strDevice);
+				Widget device = new Gson().fromJson(strDevice, Widget.class);
 				activity.arraySpinnerReg.add(strDevice);
 	            ArrayAdapter<String> adapter = new ArrayAdapter<String>(activity.getRegisterListener(),
 	                    android.R.layout.simple_spinner_item, activity.arraySpinnerReg);

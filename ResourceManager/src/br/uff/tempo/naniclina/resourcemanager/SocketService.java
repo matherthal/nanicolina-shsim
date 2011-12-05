@@ -19,7 +19,6 @@ import java.net.UnknownHostException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import br.uff.tempo.naniclina.resources.Device;
 
 /**
  *
@@ -37,11 +36,7 @@ public class SocketService {
     private PrintWriter out;
     private BufferedReader in;
     
-    
-    public Device getDevice(String format)
-    {
-    	return Device.convert(format);
-    }
+
     
     String format;
     public SocketService()
