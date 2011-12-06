@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package nanicolinashsim;
+package br.uff.ic.ubicomp.testes.knowledge;
 
 /**
  *
