@@ -4,6 +4,23 @@ package br.uff.ic.ubicomp.testes.andengine;
  * @author David Barreto
  */
 
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import nanicolinashsim.InterfacePrototyping;
+import nanicolinashsim.ResourceAgent;
+import nanicolinashsim.aggregators.AggCookerEmergency;
+import nanicolinashsim.base.DB;
+import nanicolinashsim.utils.ResourceTypes;
+import nanicolinashsim.widgets.Bed;
+import nanicolinashsim.widgets.Cooker;
+import nanicolinashsim.widgets.Refrigerator;
+import nanicolinashsim.widgets.TV;
+
 import org.anddev.andengine.engine.Engine;
 import org.anddev.andengine.engine.camera.ZoomCamera;
 import org.anddev.andengine.engine.options.EngineOptions;
@@ -12,7 +29,6 @@ import org.anddev.andengine.engine.options.resolutionpolicy.RatioResolutionPolic
 import org.anddev.andengine.entity.Entity;
 import org.anddev.andengine.entity.scene.Scene;
 import org.anddev.andengine.entity.scene.Scene.IOnSceneTouchListener;
-import org.anddev.andengine.entity.scene.background.ColorBackground;
 import org.anddev.andengine.entity.sprite.Sprite;
 import org.anddev.andengine.entity.text.ChangeableText;
 import org.anddev.andengine.input.touch.TouchEvent;
@@ -25,25 +41,19 @@ import org.anddev.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlasTextur
 import org.anddev.andengine.opengl.texture.region.TextureRegion;
 import org.anddev.andengine.ui.activity.BaseGameActivity;
 
-import br.uff.ic.ubicomp.testes.base.Position;
-import br.uff.ic.ubicomp.testes.base.Resource;
-import br.uff.ic.ubicomp.testes.knowledge.IMyResourceService;
-import br.uff.ic.ubicomp.testes.knowledge.ResourceDirectory;
+import com.google.gson.Gson;
 
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.content.ServiceConnection;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.os.IBinder;
-import android.os.RemoteException;
 import android.util.Log;
 import android.view.Display;
-import android.widget.TextView;
 import android.widget.Toast;
+import br.uff.ic.ubicomp.testes.knowledge.DiscoveryService;
+import br.uff.ic.ubicomp.testes.knowledge.Position;
+import br.uff.ic.ubicomp.testes.knowledge.RegistryService;
+import br.uff.ic.ubicomp.testes.knowledge.Widget;
 
-public class Main extends BaseGameActivity implements IOnSceneTouchListener, IScrollDetectorListener {
+public class Main extends BaseGameActivity implements Observer, IOnSceneTouchListener, IScrollDetectorListener {
 // ===========================================================
 // Constants			
 // ===========================================================
@@ -88,13 +98,12 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 	//scene
 	private Scene mScene;
 
-	private EventsInterpreter eventsInterpreter;
+	//private EventsInterpreter eventsInterpreter;
 // ===========================================================
 // Constructors
 // ===========================================================
 	
-	public IMyResourceService remoteService;
-	private ResourceDirectory resourceDir = new ResourceDirectory(this);
+
 	private int i =0 ;
 	
 
@@ -169,8 +178,34 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 		this.mEngine.getTextureManager().loadTextures(this.mBackgroundTexture, mFontTexture, mSpriteTexture, mToolTexture);
 		this.mEngine.getFontManager().loadFont(this.mFont);
 		
+		DiscoveryService ds = DiscoveryService.getInstance("SDR", "localhost");
 		//Thread que escuta chamadas de dispositivos externos
-		new Thread(new ExternDeviceListener(8085)).start();
+		new Thread(new ExternDeviceListener(this,8085)).start();
+		
+		List<ResourceAgent> lista;
+		
+		lista = ds.getAllResources();
+		for (ResourceAgent r : lista)
+		{
+			if (r.getClass().isAssignableFrom(Cooker.class))
+			{
+				Cooker c = (Cooker) r;
+				createObject(c.getPosition().getX(),c.getPosition().getY(), new Sprite(260, 10, mFogaoTextureRegionItem));
+			} else if (r.getClass().isAssignableFrom(Refrigerator.class))
+			{
+				Refrigerator c = (Refrigerator) r;
+				createObject(c.getPosition().getX(),c.getPosition().getY(), new Sprite(260, 10, mGeladeiraTextureRegionItem));
+			} else if (r.getClass().isAssignableFrom(TV.class))
+			{
+				TV c = (TV) r;
+				createObject(c.getPosition().getX(),c.getPosition().getY(), new Sprite(260, 10, mNoteBookTextureRegionItem));
+			} else if (r.getClass().isAssignableFrom(Bed.class))
+			{
+				Bed c = (Bed) r;
+				createObject(c.getPosition().getX(),c.getPosition().getY(), new Sprite(260, 10, mFogaoTextureRegionItem));
+			}
+		}
+		
 	}
 
 	@Override
@@ -210,9 +245,9 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
                 this.setPosition(x - width / 2, y - height / 2);
                     
                 //text.setText("Calling interpreter1");
-                eventsInterpreter = EventsInterpreter.getInstance();
+                //eventsInterpreter = EventsInterpreter.getInstance();
                 String action = "";
-                action = eventsInterpreter.onLocationChanged(onde);
+                //action = eventsInterpreter.onLocationChanged(onde);
                 text.setText(action);
                 
                 return true;
@@ -228,6 +263,33 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
         createItem(this.mNoteBookTextureRegionItem, 90);
 
         this.mScene.setTouchAreaBindingEnabled(true);
+        
+        //TODO implementar agregadores
+      //Start aggregators
+        String urn       = "AggCookerEmergency";
+        String url       = "localhost";
+        String urnCooker = "Fogao da cozinha";
+        String urnBed    = "Cama de Matheus";
+        //createResource(urnCooker, new Position(0.0f, 0.0f), ResourceTypes.COOKER);
+        //createResource(urnBed, new Position(0.0f, 0.0f), ResourceTypes.BED);
+        AggCookerEmergency agg = new AggCookerEmergency(urn, url, urnBed, urnCooker);
+        /*new Thread(agg).start();*/
+        //Start rules and associate to aggregators
+        //RuleCookerEmergency rule1 = new RuleCookerEmergency(agg);
+        
+        try {
+        	DiscoveryService ds = DiscoveryService.getInstance("SDR", "localhost");
+            System.out.println("DEBUG Fogao ligado");
+            Cooker cooker = (Cooker) ds.getResourceAgent(urnCooker);
+            cooker.setTurnedOn(true);
+            System.out.println("Esperando 10seg");
+            Thread.sleep(10000);
+            System.out.println("Esperou\n");
+            Bed bed = (Bed) ds.getResourceAgent(urnBed);
+            bed.setUsed(true);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(InterfacePrototyping.class.getName()).log(Level.SEVERE, null, ex);
+        }
 		
 		return this.mScene;
 	}
@@ -250,6 +312,8 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 	
 	public void createObject(final float x, final float y, Sprite sprite) {
 		
+		Log.d(TAG, "Create object");
+		
 		Sprite obj = new Sprite(x - sprite.getWidth() / 2, y - sprite.getHeight() / 2, sprite.getTextureRegion()) {
             @Override
             public boolean onAreaTouched(final TouchEvent pSceneTouchEvent, final float pTouchAreaLocalX, final float pTouchAreaLocalY) {
@@ -262,6 +326,7 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
 		
 		this.mScene.getChild(LAYER_OBJETOS).attachChild(obj);
 		this.mScene.registerTouchArea(obj);
+		Log.d(TAG, "Create object - fim");
 	}
 	
 	protected String locate(float x, float y) {
@@ -296,12 +361,10 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
         		if (pSceneTouchEvent.isActionUp()) {
         			if (x < 250) {
             			createObject(x, y, this);
-            			i++;
-            			String id = "f"+i;
-            			Resource resource = new Resource("fog�o", id, 0, new Position(x, y));
-            			resourceDir.addResource(resource);
+            			Widget resource = new Widget("cooker1", "localhost", new Position(x, y));
+            			RegistryService.getInstance("SRR", "localhost").register(resource);
             		}
-        			this.setPosition(getInitialX(), getInitialY());
+        			//this.setPosition(getInitialX(), getInitialY());
         		}
        		
         		Log.d(TAG, "init X = " + getInitialX() + ", init Y = " + getInitialY());
@@ -405,6 +468,19 @@ public class Main extends BaseGameActivity implements IOnSceneTouchListener, ISc
       //TextView t = (TextView)findViewById(R.id.serviceStatus);
   	  //t.setText( statusText );	
     }*/
+
+	@Override
+	public void update(Observable o, Object res) {
+		// TODO Auto-generated method stub
+		
+		Log.d(TAG, "update!");
+		Widget widget = (Widget) res;
+		
+		//criar if aqui!
+		createObject(widget.getPosition().getX(), widget.getPosition().getY(), new Sprite(260, 10, this.mFogaoTextureRegionItem));
+		
+		RegistryService.getInstance("SRR", "localhost").register(widget);
+	}
   
 	/*public class RemoteServiceConnection implements ServiceConnection {
 		  

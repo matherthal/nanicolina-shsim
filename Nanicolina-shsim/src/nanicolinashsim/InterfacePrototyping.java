@@ -8,14 +8,18 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import nanicolinashsim.aggregators.AggCookerEmergency;
 import nanicolinashsim.rules.RuleCookerEmergency;
-import nanicolinashsim.utils.ResourceTypes;
 import nanicolinashsim.base.DB;
 import nanicolinashsim.widgets.*;
 
 // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
 // #[regen=yes,id=DCE.B1C4746F-6885-C536-A50C-3BFFE9862A34]
 // </editor-fold> 
-public class InterfacePrototyping {    
+public class InterfacePrototyping {
+
+    public static final int COOKER = 0;
+    public static final int REFRIGERATOR = 1;
+    public static final int TV = 2;
+    public static final int BED = 3;
     private ResourceRepository repo;
     private DiscoveryService ds;
     RegistryService reg;
@@ -46,30 +50,17 @@ public class InterfacePrototyping {
         initAmbient();
         
         //Start aggregators
-        String urn       = "AggCookerEmergency";
+        /*String urn       = "AggCookerEmergency";
         String url       = "localhost";
-        String urnCooker = "Fogao da cozinha";
-        String urnBed    = "Cama de Matheus";
-        createResource(urnCooker, new Position(0.0f, 0.0f), ResourceTypes.COOKER);
-        createResource(urnBed, new Position(0.0f, 0.0f), ResourceTypes.BED);
+        String urnCooker = "Fogao da cozinha1";
+        String urnBed    = "Cama de solteiro1";
+        createResource(urnCooker, new Position(0.0f, 0.0f), InterfacePrototyping.COOKER);
+        createResource(urnBed, new Position(0.0f, 0.0f), InterfacePrototyping.BED);
         AggCookerEmergency agg = new AggCookerEmergency(urn, url, urnBed, urnCooker);
-        /*new Thread(agg).start();*/
+        new Thread(agg).start();*/
         //Start rules and associate to aggregators
         //RuleCookerEmergency rule1 = new RuleCookerEmergency(agg);
-        
         listenCommand();
-        try {
-            System.out.println("DEBUG Fogao ligado");
-            Cooker cooker = (Cooker) ds.getResourceAgent(urnCooker);
-            cooker.setTurnedOn(true);
-            System.out.println("Esperando 10seg");
-            Thread.sleep(10000);
-            System.out.println("Esperou\n");
-            Bed bed = (Bed) ds.getResourceAgent(urnBed);
-            bed.setUsed(true);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(InterfacePrototyping.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
 
     private void listenCommand() {
@@ -82,10 +73,10 @@ public class InterfacePrototyping {
 
             if (command.compareToIgnoreCase("create") == 0) {
                 System.out.println("Escolha o tipo do recurso pelo número:");
-                System.out.println(ResourceTypes.COOKER + " - Fogão");
-                System.out.println(ResourceTypes.REFRIGERATOR + " - Geladeira");
-                System.out.println(ResourceTypes.TV + " - TV");
-                System.out.println(ResourceTypes.BED + " - Cama");
+                System.out.println(COOKER + " - Fogão");
+                System.out.println(REFRIGERATOR + " - Geladeira");
+                System.out.println(TV + " - TV");
+                System.out.println(BED + " - Cama");
                 int tipo = s.nextInt();
                 s.nextLine();
                 System.out.println("Digite o nome:");
@@ -145,23 +136,6 @@ public class InterfacePrototyping {
         System.out.println("Recursos disponiveis: \n"
                 + strResources);
 
-        //Recovering the Widgets from the database
-        DB db = DB.getInstance();
-        try {
-            //List of widgets returned
-            List<Widget> widgets = db.getAllRA();
-            System.out.println("Registrando ARs carregados da Base de Dados:");
-            int i = 0;
-            for (Widget w : widgets) {
-                System.out.println("\n" + ++i + ".\nURN:" + w.getURN() + "\nURL:" + w.getURL() + "\nPos: " + w.getPosition());
-                reg.register(w);
-            }
-
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(InterfacePrototyping.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(InterfacePrototyping.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }
 
     private void createResource(String nome, Position pos, int type) {
@@ -169,16 +143,16 @@ public class InterfacePrototyping {
         Widget w = null;
 
         switch (type) {
-            case ResourceTypes.COOKER:
+            case InterfacePrototyping.COOKER:
                 w = new Cooker(nome, "localhost", pos);
                 break;
-            case ResourceTypes.REFRIGERATOR:
+            case InterfacePrototyping.REFRIGERATOR:
                 w = new Refrigerator(nome, "localhost", pos);
                 break;
-            case ResourceTypes.TV:
+            case InterfacePrototyping.TV:
                 w = new TV(nome, "localhost", pos);
                 break;
-            case ResourceTypes.BED:
+            case InterfacePrototyping.BED:
                 w = new Bed(nome, "localhost", pos);
                 break;
         }
